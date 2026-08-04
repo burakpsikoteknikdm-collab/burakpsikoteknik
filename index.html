@@ -106,13 +106,15 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-decoration: none;
         }
 
-        .logo i {
-            font-size: 2rem;
-            color: var(--secondary-color);
+        /* LOGO GÖRSELİ AYARI */
+        .logo img {
+            max-height: 60px; /* Logonun boyutu */
+            width: auto;
+            border-radius: 8px;
         }
 
         .logo-text h1 {
@@ -235,6 +237,51 @@
 
         .section-header p {
             color: #64748b;
+        }
+
+        /* ANİMASYONLU TEST CİHAZI BÖLÜMÜ */
+        .device-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 3rem;
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+        
+        .device-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .device-text h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .device-image-container {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .animated-device {
+            width: 100%;
+            max-width: 450px;
+            /* Cihaza yavaşça yukarı aşağı süzülme animasyonu veriyoruz */
+            animation: float 4s ease-in-out infinite; 
+            filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
 
         /* Hizmet Kartları */
@@ -362,7 +409,7 @@
             border: 0;
         }
 
-        /* Sabit Hızlı Eylem Butonları (Sağ Alt Köşe) */
+        /* Sabit Hızlı Eylem Butonları */
         .floating-actions {
             position: fixed;
             bottom: 20px;
@@ -438,7 +485,8 @@
     <!-- Header / Menü -->
     <header>
         <a href="#" class="logo">
-            <i class="fa-solid fa-id-card"></i>
+            <!-- LOGONUZ BURADA GÖRÜNECEK (logo.png) -->
+            <img src="logo.png" alt="Burak Psikoteknik Logo">
             <div class="logo-text">
                 <h1>BURAK PSİKOTEKNİK</h1>
                 <span>Değerlendirme Merkezi</span>
@@ -470,6 +518,21 @@
 
     <!-- Ana İçerik -->
     <main class="container">
+
+        <!-- YENİ EKLENEN: ANİMASYONLU CİHAZ BÖLÜMÜ -->
+        <section class="device-section">
+            <div class="device-text">
+                <h2>Sağlık Bakanlığı Onaylı Test Simülatörü</h2>
+                <p>Merkezimizde en son teknoloji ürünü psikoteknik değerlendirme cihazları kullanılmaktadır. Bu sayede dikkat, refleks, algı, muhakeme ve koordinasyon yetenekleriniz sıfır hata payı ile dijital ortamda ölçümlenir.</p>
+                <br>
+                <p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> 1 Saatlik Detaylı Test Süreci</strong></p>
+                <p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> Anında e-Devlet Onayı</strong></p>
+            </div>
+            <div class="device-image-container">
+                <!-- CİHAZ GÖRSELİNİZ BURADA GÖRÜNECEK (cihaz.png) -->
+                <img src="cihaz.png" alt="Psikoteknik Cihazı" class="animated-device">
+            </div>
+        </section>
 
         <!-- Hizmetlerimiz -->
         <section id="hizmetler">
@@ -513,7 +576,6 @@
                 </div>
 
                 <div class="location-content-grid">
-                    <!-- Adres ve İstediğiniz İlçe SEO Metinleri -->
                     <div class="district-list-container">
                         <div class="address-box">
                             <p>📍 Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir</p>
@@ -546,12 +608,13 @@
                         </div>
                     </div>
 
-                    <!-- Harita Alanı -->
+                    <!-- CANLI ADRES HARİTASI (Güncellendi) -->
                     <div class="map-wrapper">
                         <iframe 
-                            src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.8006542125954!2d27.13167291098367!3d38.37673277714096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14bbdfe9d3181891%3A0x6e4042f4cd5ed221!2s%C4%B0zmir%20Karaba%C4%9Flar%20Burak%20Psikoteknik!5e0!3m2!1str!2str!4v1785864279018!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>" 
+                            src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                             allowfullscreen="" 
-                            loading="lazy">
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
                     </div>
                 </div>
