@@ -360,6 +360,7 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
+/* KASMAMASI İÇİN SSS GRID ANIMASYON YAPISI */
 .faq-container {
   max-width: 900px;
   margin: 0 auto;
@@ -391,24 +392,32 @@ nav a:hover {
 
 .faq-question i {
   color: var(--secondary-color);
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
   flex-shrink: 0;
 }
 
 .faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #f8fafc;
+}
+
+.faq-answer-content {
+  overflow: hidden;
+  padding: 0 1.25rem;
   color: #475569;
   font-size: 0.95rem;
-  padding: 0 1.25rem;
+  transition: padding 0.25s ease;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 800px;
-  padding: 1rem 1.25rem;
+  grid-template-rows: 1fr;
   border-top: 1px solid #e2e8f0;
+}
+
+.faq-item.active .faq-answer-content {
+  padding: 1rem 1.25rem;
 }
 
 .faq-item.active .faq-question i {
@@ -718,7 +727,9 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon vb.) kullanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur.</p>
+          <div class="faq-answer-content">
+            <p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon vb.) kullanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur.</p>
+          </div>
         </div>
       </div>
 
@@ -728,7 +739,9 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <p>Psikoteknik Değerlendirme Raporu, alındığı tarihten itibaren <strong>5 (beş) yıl</strong> süreyle geçerlidir.</p>
+          <div class="faq-answer-content">
+            <p>Psikoteknik Değerlendirme Raporu, alındığı tarihten itibaren <strong>5 (beş) yıl</strong> süreyle geçerlidir.</p>
+          </div>
         </div>
       </div>
 
@@ -738,7 +751,9 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <p><strong>Ehliyet ve Kimlik kartınızla</strong> merkezimize gelip 1 saatlik simülatör testine girmeniz yeterlidir. Sınav veya ön hazırlık gerektirmez.</p>
+          <div class="faq-answer-content">
+            <p><strong>Ehliyet ve Kimlik kartınızla</strong> merkezimize gelip 1 saatlik simülatör testine girmeniz yeterlidir. Sınav veya ön hazırlık gerektirmez.</p>
+          </div>
         </div>
       </div>
 
@@ -748,7 +763,9 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <p><strong>Evet, kesinlikle alabilirsiniz.</strong> SRC belgenizin olup olmaması Psikoteknik belgesi almanıza engel değildir.</p>
+          <div class="faq-answer-content">
+            <p><strong>Evet, kesinlikle alabilirsiniz.</strong> SRC belgenizin olup olmaması Psikoteknik belgesi almanıza engel değildir.</p>
+          </div>
         </div>
       </div>
 
@@ -758,11 +775,13 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <div class="src-badge-grid">
-            <div class="src-badge"><strong>SRC 1:</strong> Uluslararası Yolcu Taşımacılığı</div>
-            <div class="src-badge"><strong>SRC 2:</strong> Yurt İçi Yolcu Taşımacılığı</div>
-            <div class="src-badge"><strong>SRC 3:</strong> Uluslararası Eşya/Kargo</div>
-            <div class="src-badge"><strong>SRC 4:</strong> Yurt İçi Eşya/Kargo</div>
+          <div class="faq-answer-content">
+            <div class="src-badge-grid">
+              <div class="src-badge"><strong>SRC 1:</strong> Uluslararası Yolcu Taşımacılığı</div>
+              <div class="src-badge"><strong>SRC 2:</strong> Yurt İçi Yolcu Taşımacılığı</div>
+              <div class="src-badge"><strong>SRC 3:</strong> Uluslararası Eşya/Kargo</div>
+              <div class="src-badge"><strong>SRC 4:</strong> Yurt İçi Eşya/Kargo</div>
+            </div>
           </div>
         </div>
       </div>
@@ -773,7 +792,9 @@ footer {
           <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
-          <p><strong>e-Devlet kapısına</strong> giriş yapıp <em>"Psikoteknik Değerlendirme Raporu Sorgulama"</em> yazarak belgenizi anında görüntüleyebilirsiniz.</p>
+          <div class="faq-answer-content">
+            <p><strong>e-Devlet kapısına</strong> giriş yapıp <em>"Psikoteknik Değerlendirme Raporu Sorgulama"</em> yazarak belgenizi anında görüntüleyebilirsiniz.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -867,7 +888,7 @@ footer {
 </footer>
 
 <script>
-  // FAQ Accordion
+  // FAQ Accordion (Yüksek Performanslı Toggle)
   document.querySelectorAll('.faq-question').forEach(item => {
     item.addEventListener('click', () => {
       const faqItem = item.parentElement;
