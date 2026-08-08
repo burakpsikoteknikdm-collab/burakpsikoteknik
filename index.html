@@ -1,846 +1,869 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Etiketleri -->
-    <title>Burak Psikoteknik Değerlendirme Merkezi | İzmir Psikoteknik Belgesi & Randevu</title>
-    <meta name="description" content="Burak Psikoteknik Değerlendirme Merkezi - İzmir Karabağlar, Konak, Buca, Bornova ve tüm ilçeler için Sağlık Bakanlığı onaylı, hızlı ve güvenilir Psikoteknik Belgesi. SRC ve Psikoteknik hakkında merak edilenler.">
-    <meta name="keywords" content="izmir psikoteknik belgesi, karabağlar psikoteknik, buca psikoteknik, konak psikoteknik, bornova psikoteknik, psikoteknik nedir, psikoteknik kaç yıl geçerli, src belgesi izmir, src olmadan psikoteknik alınır mı">
-    <meta name="author" content="Burak Psikoteknik Değerlendirme Merkezi">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph (Sosyal Medya Paylaşım Görünümü) -->
-    <meta property="og:title" content="Burak Psikoteknik Değerlendirme Merkezi | İzmir">
-    <meta property="og:description" content="İzmir'in tüm ilçelerine hizmet veren Sağlık Bakanlığı onaylı psikoteknik değerlendirme merkezi. Randevunuzu hemen oluşturun.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="tr_TR">
-
-    <!-- Google Arama Motoru İçin Yerel İşletme SEO Yapısı (Schema.org) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Burak Psikoteknik Değerlendirme Merkezi",
-      "telephone": "+905303100883",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
-        "addressLocality": "Karabağlar",
-        "addressRegion": "İzmir",
-        "addressCountry": "TR"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "09:00",
-          "closes": "18:00"
-        }
-      ]
-    }
-    </script>
-
-    <!-- Google SSS (FAQ) SEO Yapısı -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Psikoteknik Belgesi Nedir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Psikoteknik belgesi, ticari araç kullanan sürücülerin bedenseli ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren, Sağlık Bakanlığı onaylı merkezlerde 1 saatlik simülatör testi ve psikolog değerlendirmesi ile verilen resmi bir rapordur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Psikoteknik Belgesi Kaç Yıl Geçerlidir?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Psikoteknik değerlendirme raporu veriliş tarihinden itibaren 5 yıl süreyle geçerlidir. 5 yılın sonunda sürücülerin tekrar teste girerek belgelerini yenilemeleri gerekmektedir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Psikoteknik Belgesini Yeniletmek İçin Ne Yapılmalıdır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Süresi dolan belgenizi yenilemek için merkezimizden randevu alarak tekrar 1 saatlik test simülasyonuna girmenizin ardından psikiyatri dokror kontrolüne gitmeniz gerekmektedir. Doktor raporunuzu imzaladığı anda yeni raporunuz otomatik olarak e-Devlet sisteminize işlenir."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "İlk Defa Psikoteknik Belgesi Alacaklar Ne Yapmalıdır?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "İlk defa alacak sürücülerin ehliyet ve kimlik kartları ile birlikte merkezimize gelmeleri yeterlidir. Merkezimizde 1 saatlik test simülasyonuna girmenizin ardından psikiyatri dokror kontrolüne gitmeniz gerekmektedir. Doktor raporunuzu imzaladığı anda Psikoteknik Belgeniz otomatik olarak e-Devlet sisteminize işlenir. Test öncesinde özel bir hazırlık yapmanıza gerek yoktur."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "SRC Belgesi Almadan Psikoteknik Belgesi Alabilir miyim?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet, kesinlikle alabilirsiniz. SRC belgeniz olmasa dahi önceden Psikoteknik belgenizi alabilirsiniz. İki belge süreci birbirinden bağımsızdır."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Psikoteknik Belgemi Nereden Sorgulayabilirim?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Psikoteknik belgenizi e-Devlet kapısına (turkiye.gov.tr) T.C. kimlik numaranız ve şifrenizle giriş yaparak 'E-Sağlık / Psikoteknik Değerlendirme Raporu Sorgulama' başlığı altından dilediğiniz zaman görüntüleyebilir ve PDF çıktısını alabilirsiniz."
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- FontAwesome İkon Kütüphanesi -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-color: #0b3c5d;
-            --primary-dark: #07273d;
-            --secondary-color: #328cc1;
-            --accent-green: #25d366;
-            --accent-blue: #007bff;
-            --text-dark: #2c3e50;
-            --bg-light: #f8fafc;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Üst Bilgi Çubuğu */
-        .top-bar {
-            background-color: var(--primary-dark);
-            color: #d1d5db;
-            font-size: 0.875rem;
-            padding: 0.5rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .top-bar a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Menü & Header */
-        header {
-            background-color: #ffffff;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            padding: 0.8rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            max-width: 100%;
-        }
-
-        /* Mobil Uyumlu Logo Boyutlandırma */
-        .logo img {
-            height: auto;
-            max-height: 80px;
-            width: auto;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-
-        .logo-text h1 {
-            font-size: clamp(1.2rem, 4vw, 1.85rem);
-            color: var(--primary-color);
-            font-weight: 800;
-            line-height: 1.2;
-        }
-
-        .logo-text span {
-            font-size: clamp(0.75rem, 2.5vw, 0.9rem);
-            color: #6b7280;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Karşılama (Hero) Alanı */
-        .hero {
-            background: linear-gradient(135deg, rgba(11, 60, 93, 0.92) 0%, rgba(7, 39, 61, 0.95) 100%), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200') center/cover;
-            color: white;
-            padding: 4rem 5% 3rem 5%;
-            text-align: center;
-        }
-
-        .hero-badge {
-            background-color: rgba(50, 140, 193, 0.25);
-            border: 1px solid var(--secondary-color);
-            color: #93c5fd;
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h2 {
-            font-size: clamp(1.5rem, 5vw, 2.3rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: clamp(0.95rem, 3vw, 1.1rem);
-            max-width: 700px;
-            margin: 0 auto 2rem auto;
-            color: #e2e8f0;
-        }
-
-        .hero-cta {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 6px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: transform 0.2s;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-green);
-            color: white;
-        }
-
-        .btn-secondary {
-            background-color: #ffffff;
-            color: var(--primary-color);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Konteyner & Genel Bölümler */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 1rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(1.4rem, 4vw, 2rem);
-            color: var(--primary-color);
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: #64748b;
-            font-size: clamp(0.9rem, 2.5vw, 1rem);
-        }
-
-        /* ANİMASYONLU TEST CİHAZI BÖLÜMÜ */
-        .device-section {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 2rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            margin-bottom: 3rem;
-        }
-        
-        .device-text {
-            flex: 1 1 300px;
-        }
-
-        .device-text h2 {
-            font-size: clamp(1.3rem, 4vw, 2rem);
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .device-image-container {
-            flex: 1 1 280px;
-            text-align: center;
-        }
-
-        .animated-device {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            animation: float 4s ease-in-out infinite; 
-            filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0px); }
-        }
-
-        /* Hizmet Kartları */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e2e8f0;
-        }
-
-        .card-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #eff6ff;
-            color: var(--secondary-color);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* SSS (AÇILIR AKORDİYON) STİLLERİ */
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .faq-item {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-            transition: border-color 0.3s;
-        }
-
-        .faq-item:hover {
-            border-color: var(--secondary-color);
-        }
-
-        .faq-question {
-            padding: 1rem 1.25rem;
-            font-weight: 700;
-            font-size: clamp(0.95rem, 3vw, 1.05rem);
-            color: var(--primary-color);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-            background: white;
-            gap: 10px;
-        }
-
-        .faq-question i {
-            color: var(--secondary-color);
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            background-color: #f8fafc;
-            color: #475569;
-            font-size: 0.95rem;
-            padding: 0 1.25rem;
-            border-top: 1px solid transparent;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 800px;
-            padding: 1rem 1.25rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .src-badge-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 8px;
-            margin-top: 10px;
-        }
-
-        .src-badge {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            padding: 8px 10px;
-            border-radius: 6px;
-            font-size: 0.85rem;
-        }
-
-        .src-badge strong {
-            color: var(--primary-color);
-            display: block;
-        }
-
-        /* Ulaşım ve SEO Bölümü */
-        .location-section {
-            background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: var(--shadow);
-            border: 1px solid #e2e8f0;
-            overflow: hidden;
-            margin-top: 2rem;
-        }
-
-        .location-header-bar {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1.25rem 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .location-header-bar h3 {
-            font-size: clamp(1.05rem, 3.5vw, 1.3rem);
-        }
-
-        .location-content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-
-        .district-list-container {
-            padding: 1.5rem;
-            max-height: 450px;
-            overflow-y: auto;
-            background-color: #ffffff;
-        }
-
-        .address-box {
-            background-color: #f1f5f9;
-            border-left: 4px solid var(--secondary-color);
-            padding: 1rem;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 1.25rem;
-            font-size: 0.9rem;
-        }
-
-        .address-box p {
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 0.3rem;
-        }
-
-        .district-items {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .district-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-            font-size: 0.88rem;
-            color: #334155;
-            background-color: #f8fafc;
-            padding: 8px 10px;
-            border-radius: 6px;
-            border: 1px solid #f1f5f9;
-        }
-
-        .district-item i {
-            color: #10b981;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-
-        .map-wrapper {
-            width: 100%;
-            min-height: 350px;
-            background-color: #e2e8f0;
-        }
-
-        .map-wrapper iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 350px;
-            border: 0;
-        }
-
-        /* Sabit Hızlı Eylem Butonları */
-        .floating-actions {
-            position: fixed;
-            bottom: 15px;
-            right: 15px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000;
-        }
-
-        .float-btn {
-            width: 52px;
-            height: 52px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            font-size: 1.5rem;
-            transition: transform 0.2s;
-        }
-
-        .float-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .float-whatsapp {
-            background-color: var(--accent-green);
-        }
-
-        .float-call {
-            background-color: var(--accent-blue);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--primary-dark);
-            color: #94a3b8;
-            padding: 2.5rem 5% 1.5rem 5%;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        /* MEDYA SORGULARI (MOBİL ÖZEL AYARLAR) */
-        @media (max-width: 900px) {
-            .location-content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-bar {
-                justify-content: center;
-                text-align: center;
-            }
-            header {
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                padding: 1rem 3%;
-            }
-            .logo {
-                flex-direction: column;
-                gap: 8px;
-            }
-            .logo img {
-                max-height: 65px;
-            }
-            nav ul {
-                justify-content: center;
-                width: 100%;
-            }
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-            }
-            .btn {
-                width: 100%;
-            }
-            .device-section {
-                padding: 1.5rem;
-                text-align: center;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO Meta Etiketleri -->
+<title>Burak Psikoteknik Değerlendirme Merkezi | İzmir Psikoteknik Belgesi & Randevu</title>
+<meta name="description" content="Burak Psikoteknik Değerlendirme Merkezi - İzmir Karabağlar, Konak, Buca, Bornova ve tüm ilçeler için Sağlık Bakanlığı onaylı, hızlı ve güvenilir Psikoteknik Belgesi. SRC ve Psikoteknik hakkında merak edilenler.">
+<meta name="keywords" content="izmir psikoteknik belgesi, karabağlar psikoteknik, buca psikoteknik, konak psikoteknik, bornova psikoteknik, psikoteknik nedir, psikoteknik kaç yıl geçerli, src belgesi izmir, src olmadan psikoteknik alınır mı">
+<meta name="author" content="Burak Psikoteknik Değerlendirme Merkezi">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph (Sosyal Medya Paylaşım Görünümü) -->
+<meta property="og:title" content="Burak Psikoteknik Değerlendirme Merkezi | İzmir">
+<meta property="og:description" content="İzmir'in tüm ilçelerine hizmet veren Sağlık Bakanlığı onaylı psikoteknik değerlendirme merkezi. Randevunuzu hemen oluşturun.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+
+<!-- Google Arama Motoru İçin Yerel İşletme SEO Yapısı (Schema.org) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "MedicalBusiness",
+"name": "Burak Psikoteknik Değerlendirme Merkezi",
+"telephone": "+905303100883",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
+"addressLocality": "Karabağlar",
+"addressRegion": "İzmir",
+"addressCountry": "TR"
+},
+"openingHoursSpecification": [
+{
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+"opens": "09:00",
+"closes": "18:00"
+}
+]
+}
+</script>
+
+<!-- Google SSS (FAQ) SEO Yapısı -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Psikoteknik Belgesi Nedir?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Psikoteknik belgesi, ticari araç kullanan sürücülerin bedenseli ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren, Sağlık Bakanlığı onaylı merkezlerde 1 saatlik simülatör testi ve psikolog değerlendirmesi ile verilen resmi bir rapordur."
+}
+},
+{
+"@type": "Question",
+"name": "Psikoteknik Belgesi Kaç Yıl Geçerlidir?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Psikoteknik değerlendirme raporu veriliş tarihinden itibaren 5 yıl süreyle geçerlidir. 5 yılın sonunda sürücülerin tekrar teste girerek belgelerini yenilemeleri gerekmektedir."
+}
+},
+{
+"@type": "Question",
+"name": "Psikoteknik Belgesini Yeniletmek İçin Ne Yapılmalıdır?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Süresi dolan belgenizi yenilemek için merkezimizden randevu alarak tekrar 1 saatlik test simülasyonuna girmenizin ardından psikiyatri dokror kontrolüne gitmeniz gerekmektedir. Doktor raporunuzu imzaladığı anda yeni raporunuz otomatik olarak e-Devlet sisteminize işlenir."
+}
+},
+{
+"@type": "Question",
+"name": "İlk Defa Psikoteknik Belgesi Alacaklar Ne Yapmalıdır?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "İlk defa alacak sürücülerin ehliyet ve kimlik kartları ile birlikte merkezimize gelmeleri yeterlidir. Merkezimizde 1 saatlik test simülasyonuna girmenizin ardından psikiyatri dokror kontrolüne gitmeniz gerekmektedir. Doktor raporunuzu imzaladığı anda Psikoteknik Belgeniz otomatik olarak e-Devlet sisteminize işlenir. Test öncesinde özel bir hazırlık yapmanıza gerek yoktur."
+}
+},
+{
+"@type": "Question",
+"name": "SRC Belgesi Almadan Psikoteknik Belgesi Alabilir miyim?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Evet, kesinlikle alabilirsiniz. SRC belgeniz olmasa dahi önceden Psikoteknik belgenizi alabilirsiniz. İki belge süreci birbirinden bağımsızdır."
+}
+},
+{
+"@type": "Question",
+"name": "Psikoteknik Belgemi Nereden Sorgulayabilirim?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Psikoteknik belgenizi e-Devlet kapısına (turkiye.gov.tr) T.C. kimlik numaranız ve şifrenizle giriş yaparak 'E-Sağlık / Psikoteknik Değerlendirme Raporu Sorgulama' başlığı altından dilediğiniz zaman görüntüleyebilir ve PDF çıktısını alabilirsiniz."
+}
+}
+]
+}
+</script>
+
+<!-- FontAwesome İkon Kütüphanesi -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+--primary-color: #0b3c5d;
+--primary-dark: #07273d;
+--secondary-color: #328cc1;
+--accent-green: #25d366;
+--accent-blue: #007bff;
+--text-dark: #2c3e50;
+--bg-light: #f8fafc;
+--shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+scroll-behavior: smooth;
+}
+
+body {
+background-color: var(--bg-light);
+color: var(--text-dark);
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+/* Üst Bilgi Çubuğu */
+.top-bar {
+background-color: var(--primary-dark);
+color: #d1d5db;
+font-size: 0.875rem;
+padding: 0.5rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+.top-bar a {
+color: white;
+text-decoration: none;
+font-weight: 600;
+}
+
+/* Menü & Header */
+header {
+background-color: #ffffff;
+position: sticky;
+top: 0;
+z-index: 999;
+box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+padding: 0.8rem 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+text-decoration: none;
+max-width: 100%;
+}
+
+/* Mobil Uyumlu Logo Boyutlandırma */
+.logo img {
+height: auto;
+max-height: 80px;
+width: auto;
+border-radius: 8px;
+object-fit: contain;
+}
+
+.logo-text h1 {
+font-size: clamp(1.2rem, 4vw, 1.85rem);
+color: var(--primary-color);
+font-weight: 800;
+line-height: 1.2;
+}
+
+.logo-text span {
+font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+color: #6b7280;
+display: block;
+text-transform: uppercase;
+letter-spacing: 1px;
+font-weight: 700;
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+nav a {
+text-decoration: none;
+color: var(--text-dark);
+font-weight: 600;
+font-size: 0.95rem;
+transition: color 0.2s;
+}
+
+nav a:hover {
+color: var(--secondary-color);
+}
+
+/* Karşılama (Hero) Alanı */
+.hero {
+background: linear-gradient(135deg, rgba(11, 60, 93, 0.92) 0%, rgba(7, 39, 61, 0.95) 100%), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1200') center/cover;
+color: white;
+padding: 4rem 5% 3rem 5%;
+text-align: center;
+}
+
+.hero-badge {
+background-color: rgba(50, 140, 193, 0.25);
+border: 1px solid var(--secondary-color);
+color: #93c5fd;
+padding: 6px 16px;
+border-radius: 50px;
+font-size: 0.85rem;
+font-weight: 600;
+display: inline-block;
+margin-bottom: 1.5rem;
+}
+
+.hero h2 {
+font-size: clamp(1.5rem, 5vw, 2.3rem);
+font-weight: 800;
+margin-bottom: 1rem;
+}
+
+.hero p {
+font-size: clamp(0.95rem, 3vw, 1.1rem);
+max-width: 700px;
+margin: 0 auto 2rem auto;
+color: #e2e8f0;
+}
+
+.hero-cta {
+display: flex;
+justify-content: center;
+gap: 15px;
+flex-wrap: wrap;
+}
+
+.btn {
+padding: 12px 24px;
+border-radius: 6px;
+font-weight: 700;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+transition: transform 0.2s;
+}
+
+.btn-primary {
+background-color: var(--accent-green);
+color: white;
+}
+
+.btn-secondary {
+background-color: #ffffff;
+color: var(--primary-color);
+}
+
+.btn:hover {
+transform: translateY(-2px);
+}
+
+/* Konteyner & Genel Bölümler */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 3rem 1rem;
+}
+
+.section-header {
+text-align: center;
+margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+font-size: clamp(1.4rem, 4vw, 2rem);
+color: var(--primary-color);
+font-weight: 800;
+margin-bottom: 0.5rem;
+}
+
+.section-header p {
+color: #64748b;
+font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+/* ANİMASYONLU TEST CİHAZI BÖLÜMÜ */
+.device-section {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 2rem;
+background: white;
+padding: 2rem;
+border-radius: 16px;
+box-shadow: var(--shadow);
+margin-bottom: 3rem;
+}
+
+.device-text {
+flex: 1 1 300px;
+}
+
+.device-text h2 {
+font-size: clamp(1.3rem, 4vw, 2rem);
+color: var(--primary-color);
+margin-bottom: 1rem;
+}
+
+.device-image-container {
+flex: 1 1 280px;
+text-align: center;
+}
+
+.animated-device {
+width: 100%;
+max-width: 400px;
+height: auto;
+animation: float 4s ease-in-out infinite; 
+filter: drop-shadow(0 15px 15px rgba(0,0,0,0.15));
+}
+
+@keyframes float {
+0% { transform: translateY(0px); }
+50% { transform: translateY(-12px); }
+100% { transform: translateY(0px); }
+}
+
+/* Hizmet Kartları */
+.grid-3 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 1.5rem;
+}
+
+.card {
+background: white;
+padding: 1.5rem;
+border-radius: 12px;
+box-shadow: var(--shadow);
+border: 1px solid #e2e8f0;
+}
+
+.card-icon {
+width: 50px;
+height: 50px;
+background-color: #eff6ff;
+color: var(--secondary-color);
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.card h3 {
+font-size: 1.2rem;
+color: var(--primary-color);
+margin-bottom: 0.5rem;
+}
+
+/* SSS (AÇILIR AKORDİYON) STİLLERİ */
+.faq-container {
+max-width: 900px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.faq-item {
+background: white;
+border: 1px solid #e2e8f0;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+transition: border-color 0.3s;
+}
+
+.faq-item:hover {
+border-color: var(--secondary-color);
+}
+
+.faq-question {
+padding: 1rem 1.25rem;
+font-weight: 700;
+font-size: clamp(0.95rem, 3vw, 1.05rem);
+color: var(--primary-color);
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+user-select: none;
+background: white;
+gap: 10px;
+}
+
+.faq-question i {
+color: var(--secondary-color);
+transition: transform 0.3s ease;
+flex-shrink: 0;
+}
+
+.faq-answer {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease, padding 0.3s ease;
+background-color: #f8fafc;
+color: #475569;
+font-size: 0.95rem;
+padding: 0 1.25rem;
+border-top: 1px solid transparent;
+}
+
+.faq-item.active .faq-answer {
+max-height: 800px;
+padding: 1rem 1.25rem;
+border-top: 1px solid #e2e8f0;
+}
+
+.faq-item.active .faq-question i {
+transform: rotate(180deg);
+}
+
+.src-badge-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+gap: 8px;
+margin-top: 10px;
+}
+
+.src-badge {
+background: #ffffff;
+border: 1px solid #cbd5e1;
+padding: 8px 10px;
+border-radius: 6px;
+font-size: 0.85rem;
+}
+
+.src-badge strong {
+color: var(--primary-color);
+display: block;
+}
+
+/* Ulaşım ve SEO Bölümü */
+.location-section {
+background-color: #ffffff;
+border-radius: 16px;
+box-shadow: var(--shadow);
+border: 1px solid #e2e8f0;
+overflow: hidden;
+margin-top: 2rem;
+}
+
+.location-header-bar {
+background-color: var(--primary-color);
+color: white;
+padding: 1.25rem 1.5rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+gap: 15px;
+}
+
+.location-header-bar h3 {
+font-size: clamp(1.05rem, 3.5vw, 1.3rem);
+}
+
+.location-content-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 0;
+}
+
+.district-list-container {
+padding: 1.5rem;
+max-height: 450px;
+overflow-y: auto;
+background-color: #ffffff;
+}
+
+.address-box {
+background-color: #f1f5f9;
+border-left: 4px solid var(--secondary-color);
+padding: 1rem;
+border-radius: 0 8px 8px 0;
+margin-bottom: 1.25rem;
+font-size: 0.9rem;
+}
+
+.address-box p {
+font-weight: 600;
+color: var(--primary-color);
+margin-bottom: 0.3rem;
+}
+
+.district-items {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.district-item {
+display: flex;
+align-items: flex-start;
+gap: 8px;
+font-size: 0.88rem;
+color: #334155;
+background-color: #f8fafc;
+padding: 8px 10px;
+border-radius: 6px;
+border: 1px solid #f1f5f9;
+}
+
+.district-item i {
+color: #10b981;
+margin-top: 3px;
+flex-shrink: 0;
+}
+
+.map-wrapper {
+width: 100%;
+min-height: 350px;
+background-color: #e2e8f0;
+}
+
+.map-wrapper iframe {
+width: 100%;
+height: 100%;
+min-height: 350px;
+border: 0;
+}
+
+/* Sabit Hızlı Eylem Butonları */
+.floating-actions {
+position: fixed;
+bottom: 15px;
+right: 15px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+z-index: 1000;
+}
+
+.float-btn {
+width: 52px;
+height: 52px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+color: white;
+text-decoration: none;
+box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+font-size: 1.5rem;
+transition: transform 0.2s;
+}
+
+.float-btn:hover {
+transform: scale(1.1);
+}
+
+.float-whatsapp {
+background-color: var(--accent-green);
+}
+
+.float-call {
+background-color: var(--accent-blue);
+}
+
+/* Footer */
+footer {
+background-color: var(--primary-dark);
+color: #94a3b8;
+padding: 2.5rem 5% 1.5rem 5%;
+margin-top: 3rem;
+text-align: center;
+}
+
+/* MEDYA SORGULARI (MOBİL ÖZEL AYARLAR) */
+@media (max-width: 900px) {
+.location-content-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 768px) {
+.top-bar {
+justify-content: center;
+text-align: center;
+}
+header {
+flex-direction: column;
+justify-content: center;
+text-align: center;
+padding: 1rem 3%;
+}
+.logo {
+flex-direction: column;
+gap: 8px;
+}
+.logo img {
+max-height: 65px;
+}
+nav ul {
+justify-content: center;
+width: 100%;
+}
+.hero-cta {
+flex-direction: column;
+width: 100%;
+}
+.btn {
+width: 100%;
+}
+.device-section {
+padding: 1.5rem;
+text-align: center;
+}
+}
+</style>
 </head>
 <body>
 
-    <!-- Üst İletişim Çubuğu -->
-    <div class="top-bar">
-        <div>
-            <span><i class="fa-solid fa-clock"></i> Pzt - Cmt: 09:00 - 18:00</span> | 
-            <span><i class="fa-solid fa-location-dot"></i> Karabağlar / İzmir</span>
-        </div>
-        <div>
-            <a href="tel:05303100883"><i class="fa-solid fa-phone"></i> 0530 310 08 83</a>
-        </div>
-    </div>
+<!-- Üst İletişim Çubuğu -->
+<div class="top-bar">
+<div>
+<span><i class="fa-solid fa-clock"></i> Pzt - Cmt: 09:00 - 18:00</span> | 
+<span><i class="fa-solid fa-location-dot"></i> Karabağlar / İzmir</span>
+</div>
+<div>
+<a href="tel:05303100883"><i class="fa-solid fa-phone"></i> 0530 310 08 83</a>
+</div>
+</div>
 
-    <!-- Header / Menü -->
-    <header>
-        <a href="#" class="logo">
-            <img src="logo.png" alt="Burak Psikoteknik Logo">
-            <div class="logo-text">
-                <h1>BURAK PSİKOTEKNİK</h1>
-                <span>Değerlendirme Merkezi</span>
-            </div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                <li><a href="#sss">S.S.S. / Rehber</a></li>
-                <li><a href="#ulasim">Ulaşım & İlçeler</a></li>
-                <li><a href="tel:05303100883" style="color: var(--accent-blue);"><i class="fa-solid fa-phone"></i> Randevu Al</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Header / Menü -->
+<header>
+<a href="#" class="logo">
+<img src="logo.png" alt="Burak Psikoteknik Logo">
+<div class="logo-text">
+<h1>BURAK PSİKOTEKNİK</h1>
+<span>Değerlendirme Merkezi</span>
+</div>
+</a>
+<nav>
+<ul>
+<li><a href="#hizmetler">Hizmetlerimiz</a></li>
+<li><a href="#sss">S.S.S. / Rehber</a></li>
+<li><a href="#ulasim">Ulaşım & İlçeler</a></li>
+<li><a href="tel:05303100883" style="color: var(--accent-blue);"><i class="fa-solid fa-phone"></i> Randevu Al</a></li>
+</ul>
+</nav>
+</header>
 
-    <!-- Karşılama / Hero Bölümü -->
-    <section class="hero">
-        <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> T.C. Sağlık Bakanlığı Onaylı Merkez</span>
-        <h2>İzmir Psikoteknik Belgesi Randevu Merkezi</h2>
-        <p>Ticari araç sürücüleri için gerekli olan Psikoteknik Değerlendirme Raporunuzu simülatör eşliğinde, uzman psikologlarımızla 1 saat içinde hazırlıyoruz.</p>
-        <div class="hero-cta">
-            <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="btn btn-primary" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bilgi Al
-            </a>
-            <a href="tel:05303100883" class="btn btn-secondary">
-                <i class="fa-solid fa-phone"></i> Hemen Ara: 0530 310 08 83
-            </a>
-        </div>
-    </section>
+<!-- Karşılama / Hero Bölümü -->
+<section class="hero">
+<span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> T.C. Sağlık Bakanlığı Onaylı Merkez</span>
+<h2>İzmir Psikoteknik Belgesi Randevu Merkezi</h2>
+<p>Ticari araç sürücüleri için gerekli olan Psikoteknik Değerlendirme Raporunuzu simülatör eşliğinde, uzman psikologlarımızla 1 saat içinde hazırlıyoruz.</p>
+<div class="hero-cta">
+<a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="btn btn-primary" target="_blank">
+<i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bilgi Al
+</a>
+<a href="tel:05303100883" class="btn btn-secondary">
+<i class="fa-solid fa-phone"></i> Hemen Ara: 0530 310 08 83
+</a>
+</div>
+</section>
 
-    <!-- Ana İçerik -->
-    <main class="container">
+<!-- Ana İçerik -->
+<main class="container">
 
-        <!-- ANİMASYONLU CİHAZ BÖLÜMÜ -->
-        <section class="device-section">
-            <div class="device-text">
-                <h2>Sağlık Bakanlığı Onaylı Test Simülatörü</h2>
-                <p>Merkezimizde en son teknoloji ürünü psikoteknik değerlendirme cihazları kullanılmaktadır. Bu sayede dikkat, refleks, algı, muhakeme ve koordinasyon yetenekleriniz sıfır hata payı ile dijital ortamda ölçümlenir.</p>
-                <br>
-                <p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> 1 Saatlik Detaylı Test Süreci</strong></p>
-                <p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> Anında e-Devlet Onayı</strong></p>
-            </div>
-            <div class="device-image-container">
-                <img src="cihaz.png" alt="Psikoteknik Cihazı" class="animated-device">
-            </div>
-        </section>
+<!-- ANİMASYONLU CİHAZ BÖLÜMÜ -->
+<section class="device-section">
+<div class="device-text">
+<h2>Sağlık Bakanlığı Onaylı Test Simülatörü</h2>
+<p>Merkezimizde en son teknoloji ürünü psikoteknik değerlendirme cihazları kullanılmaktadır. Bu sayede dikkat, refleks, algı, muhakeme ve koordinasyon yetenekleriniz sıfır hata payı ile dijital ortamda ölçümlenir.</p>
+<br>
+<p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> 1 Saatlik Detaylı Test Süreci</strong></p>
+<p><strong><i class="fa-solid fa-check" style="color: var(--accent-green);"></i> Anında e-Devlet Onayı</strong></p>
+</div>
+<div class="device-image-container">
+<img src="cihaz.png" alt="Psikoteknik Cihazı" class="animated-device">
+</div>
+</section>
 
-        <!-- Hizmetlerimiz -->
-        <section id="hizmetler">
-            <div class="section-header">
-                <h2>Psikoteknik Değerlendirme Süreci</h2>
-                <p>Güvenilir, hızlı ve yasal mevzuata tam uyumlu hizmet anlayışı</p>
-            </div>
+<!-- Hizmetlerimiz -->
+<section id="hizmetler">
+<div class="section-header">
+<h2>Psikoteknik Değerlendirme Süreci</h2>
+<p>Güvenilir, hızlı ve yasal mevzuata tam uyumlu hizmet anlayışı</p>
+</div>
 
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
-                    <h3>Simülatör Testi</h3>
-                    <p>Onaylı cihazlarımızda dikkat, algı, refleks ve koordinasyon yeteneklerinizi ölçen testler uygulanır.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-user-doctor"></i></div>
-                    <h3>Deneyimli Psikolog</h3>
-                    <p>Test süreciniz alanında deneyimli psikologlarımız eşliğinde ve rehberliğinde gerçekleştirilir.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-file-circle-check"></i></div>
-                    <h3>e-Devlet Onaylı Rapor</h3>
-                    <p>Testin ardından raporunuz e-Devlet sistemine işlenir. Aynı gün belgenize erişebilirsiniz.</p>
-                </div>
-            </div>
-        </section>
+<div class="grid-3">
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+<h3>Simülatör Testi</h3>
+<p>Onaylı cihazlarımızda dikkat, algı, refleks ve koordinasyon yeteneklerinizi ölçen testler uygulanır.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-user-doctor"></i></div>
+<h3>Deneyimli Psikolog</h3>
+<p>Test süreciniz alanında deneyimli psikologlarımız eşliğinde ve rehberliğinde gerçekleştirilir.</p>
+</div>
+<div class="card">
+<div class="card-icon"><i class="fa-solid fa-file-circle-check"></i></div>
+<h3>e-Devlet Onaylı Rapor</h3>
+<p>Testin ardından raporunuz e-Devlet sistemine işlenir. Aynı gün belgenize erişebilirsiniz.</p>
+</div>
+</div>
+</section>
 
-        <!-- SIKÇA SORULAN SORULAR (SSS / REHBER) BÖLÜMÜ -->
-        <section id="sss" style="margin-top: 4rem;">
-            <div class="section-header">
-                <h2>Sıkça Sorulan Sorular & Bilgi Rehberi</h2>
-                <p>Psikoteknik ve SRC belgeleri hakkında tüm merak ettikleriniz</p>
-            </div>
+<!-- SIKÇA SORULAN SORULAR (SSS / REHBER) BÖLÜMÜ -->
+<section id="sss" style="margin-top: 4rem;">
+<div class="section-header">
+<h2>Sıkça Sorulan Sorular & Bilgi Rehberi</h2>
+<p>Psikoteknik ve SRC belgeleri hakkında tüm merak ettikleriniz</p>
+</div>
 
-            <div class="faq-container">
-                <!-- Soru 1 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-circle-question" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgesi Nedir?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon, kamyonet vb.) kullanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur. 1 saat süren simülatör testi ve psikolog görüşmesi sonrasında verilir.</p>
-                    </div>
-                </div>
+<div class="faq-container">
+<!-- Soru 1 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-circle-question" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgesi Nedir?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon, kamyonet vb.) kullanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur. 1 saat süren simülatör testi ve psikolog görüşmesi sonrasında verilir.</p>
+</div>
+</div>
 
-                <!-- Soru 2 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-clock" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgesi Kaç Yıl Geçerlidir?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Psikoteknik Değerlendirme Raporu, alındığı tarihten itibaren <strong>5 (beş) yıl</strong> süreyle geçerlidir. 5 yılın sonunda ticari araç kullanmaya devam edecek sürücülerin testi tekrarlayarak belgelerini yenilemesi gerekmektedir.</p>
-                    </div>
-                </div>
+<!-- Soru 2 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-clock" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgesi Kaç Yıl Geçerlidir?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Psikoteknik Değerlendirme Raporu, alındığı tarihten itibaren <strong>5 (beş) yıl</strong> süreyle geçerlidir. 5 yılın sonunda ticari araç kullanmaya devam edecek sürücülerin testi tekrarlayarak belgelerini yenilemesi gerekmektedir.</p>
+</div>
+</div>
 
-                <!-- Soru 3 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-rotate" style="color: var(--secondary-color); margin-right: 8px;"></i> Yeniletmek veya İlk Defa Almak İçin Ne Yapılmalıdır?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Hem ilk defa alacaklar hem de süresi dolup belgesini yeniletecek olan sürücülerimiz için süreç aynıdır: <strong>Ehliyet ve Kimlik kartınızla</strong> merkezimize gelip 1 saatlik simülatör testine girmeniz yeterlidir. Sınav veya ön hazırlık gerektirmez.</p>
-                    </div>
-                </div>
+<!-- Soru 3 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-rotate" style="color: var(--secondary-color); margin-right: 8px;"></i> Yeniletmek veya İlk Defa Almak İçin Ne Yapılmalıdır?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Hem ilk defa alacaklar hem de süresi dolup belgesini yeniletecek olan sürücülerimiz için süreç aynıdır: <strong>Ehliyet ve Kimlik kartınızla</strong> merkezimize gelip 1 saatlik simülatör testine girmeniz yeterlidir. Sınav veya ön hazırlık gerektirmez.</p>
+</div>
+</div>
 
-                <!-- Soru 4 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-id-card-clip" style="color: var(--secondary-color); margin-right: 8px;"></i> SRC Belgesi Almadan Psikoteknik Alabilir miyim?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>Evet, kesinlikle alabilirsiniz.</strong> SRC belgenizin olup olmaması Psikoteknik belgesi almanıza engel değildir. SRC ve Psikoteknik birbirinden bağımsız belgelerdir; hangisini önce alacağınızın bir önemi yoktur.</p>
-                    </div>
-                </div>
+<!-- Soru 4 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-id-card-clip" style="color: var(--secondary-color); margin-right: 8px;"></i> SRC Belgesi Almadan Psikoteknik Alabilir miyim?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p><strong>Evet, kesinlikle alabilirsiniz.</strong> SRC belgenizin olup olmaması Psikoteknik belgesi almanıza engel değildir. SRC ve Psikoteknik birbirinden bağımsız belgelerdir; hangisini önce alacağınızın bir önemi yoktur.</p>
+</div>
+</div>
 
-                <!-- Soru 5 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-truck-front" style="color: var(--secondary-color); margin-right: 8px;"></i> SRC 1, SRC 2, SRC 3, SRC 4 Belgeleri Ne İşe Yarar?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>SRC belgeleri Mesleki Yeterlilik Belgeleridir ve kapsadığı alanlar şunlardır:</p>
-                        <div class="src-badge-grid">
-                            <div class="src-badge"><strong>SRC 1 Belgesi:</strong> Uluslararası Yolcu Taşımacılığı</div>
-                            <div class="src-badge"><strong>SRC 2 Belgesi:</strong> Yurt İçi Yolcu Taşımacılığı (Taksi, Minibüs, Otobüs)</div>
-                            <div class="src-badge"><strong>SRC 3 Belgesi:</strong> Uluslararası Eşya/Kargo Taşımacılığı</div>
-                            <div class="src-badge"><strong>SRC 4 Belgesi:</strong> Yurt İçi Eşya/Kargo Taşımacılığı (Kamyon, Panelvan vb.)</div>
-                        </div>
-                        <p style="margin-top: 10px;">SRC belgeleri Milli Eğitim Bakanlığı (MEB) onaylı SRC kurslarından ve yapılan sınav sonucunda alınır.</p>
-                    </div>
-                </div>
+<!-- Soru 5 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-truck-front" style="color: var(--secondary-color); margin-right: 8px;"></i> SRC 1, SRC 2, SRC 3, SRC 4 Belgeleri Ne İşe Yarar?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>SRC belgeleri Mesleki Yeterlilik Belgeleridir ve kapsadığı alanlar şunlardır:</p>
+<div class="src-badge-grid">
+<div class="src-badge"><strong>SRC 1 Belgesi:</strong> Uluslararası Yolcu Taşımacılığı</div>
+<div class="src-badge"><strong>SRC 2 Belgesi:</strong> Yurt İçi Yolcu Taşımacılığı (Taksi, Minibüs, Otobüs)</div>
+<div class="src-badge"><strong>SRC 3 Belgesi:</strong> Uluslararası Eşya/Kargo Taşımacılığı</div>
+<div class="src-badge"><strong>SRC 4 Belgesi:</strong> Yurt İçi Eşya/Kargo Taşımacılığı (Kamyon, Panelvan vb.)</div>
+</div>
+<p style="margin-top: 10px;">SRC belgeleri Milli Eğitim Bakanlığı (MEB) onaylı SRC kurslarından ve yapılan sınav sonucunda alınır.</p>
+</div>
+</div>
 
-                <!-- Soru 6 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span><i class="fa-solid fa-magnifying-glass" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgemi Nereden Sorgulayabilirim?</span>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Artık fiziksel kart basılmamaktadır. Merkezimizde testinizi tamamladıktan sonra belgeniz anında e-Devlet sistemine yüklenir. <strong>e-Devlet kapısına</strong> giriş yapıp arama kutusuna <em>"Psikoteknik Değerlendirme Raporu Sorgulama"</em> yazarak belgenizi görüntüleyebilir, PDF çıktısını alabilir veya polis kontrollerinde gösterebilirsiniz.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Soru 6 -->
+<div class="faq-item">
+<div class="faq-question">
+<span><i class="fa-solid fa-magnifying-glass" style="color: var(--secondary-color); margin-right: 8px;"></i> Psikoteknik Belgemi Nereden Sorgulayabilirim?</span>
+<i class="fa-solid fa-chevron-down"></i>
+</div>
+<div class="faq-answer">
+<p>Artık fiziksel kart basılmamaktadır. Merkezimizde testinizi tamamladıktan sonra belgeniz anında e-Devlet sistemine yüklenir. <strong>e-Devlet kapısına</strong> giriş yapıp arama kutusuna <em>"Psikoteknik Değerlendirme Raporu Sorgulama"</em> yazarak belgenizi görüntüleyebilir, PDF çıktısını alabilir veya polis kontrollerinde gösterebilirsiniz.</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- Ulaşım ve SEO İzmir İlçeleri Bölümü -->
+<!-- Ulaşım ve SEO İzmir İlçeleri Bölümü -->
 <section id="ulasim" style="margin-top: 4rem;">
-    <div class="section-header">
-        <h2>İzmir Psikoteknik Hizmet Bölgelerimiz & Ulaşım</h2>
-        <p>İzmir'in tüm ilçelerinden Karabağlar'daki Sağlık Bakanlığı onaylı merkezimize kolayca ulaşabilir, aynı gün psikoteknik raporunuzu alabilirsiniz.</p>
-    </div>
+<div class="section-header">
+<h2>İzmir Psikoteknik Hizmet Bölgelerimiz & Ulaşım</h2>
+<p>İzmir'in tüm ilçelerinden Karabağlar'daki Sağlık Bakanlığı onaylı merkezimize kolayca ulaşabilir, aynı gün psikoteknik raporunuzu alabilirsiniz.</p>
+</div>
 
-    <div class="location-section">
-        <div class="location-header-bar">
-            <h3><i class="fa-solid fa-map-location-dot"></i> Burak Psikoteknik Değerlendirme Merkezi</h3>
-            <div>
-                <a href="tel:05303100883" style="color: white; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-phone"></i> 0530 310 08 83</a>
-            </div>
-        </div>
+<div class="location-section">
+<div class="location-header-bar">
+<h3><i class="fa-solid fa-map-location-dot"></i> Burak Psikoteknik Değerlendirme Merkezi</h3>
+<div>
+<a href="tel:05303100883" style="color: white; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-phone"></i> 0530 310 08 83</a>
+</div>
+</div>
 
-        <div class="location-content-grid">
-            <div class="district-list-container">
-                <div class="address-box">
-                    <p>📍 Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir</p>
-                    <p>📞 <a href="tel:05303100883" style="color: inherit; text-decoration: none; font-weight: bold;">0530 310 08 83</a></p>
+<div class="location-content-grid">
+<div class="district-list-container">
+<div class="address-box">
+<p>📍 Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir</p>
+<p>📞 <a href="tel:05303100883" style="color: inherit; text-decoration: none; font-weight: bold;">0530 310 08 83</a></p>
+</div>
+
+<div class="district-items">
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Karabağlar Psikoteknik Belgesi:</strong> Karabağlar'daki yetkili merkezimizden aynı gün içinde psikoteknik testinizi tamamlayıp raporunuzu e-Devlet'e işletebilirsiniz.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Konak Psikoteknik Belgesi:</strong> Konak ve Üçyol bölgesinden merkezimize toplu taşıma ve özel araçla birkaç dakikada kolay ulaşım imkanı.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Buca Psikoteknik Belgesi:</strong> Buca'da ikamet eden ticari araç sürücüleri (taksi, otobüs, kamyonet) için en yakın ve hızlı psikoteknik test merkezi.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Gaziemir Psikoteknik Belgesi:</strong> Akçay Caddesi üzerinden merkezimize doğrudan ulaşarak sıra beklemeden psikoteknik belgesi alabilirsiniz.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Balçova Psikoteknik Belgesi:</strong> Balçova ve Üçkuyular bölgesinden Karabağlar merkezimize hızlı ve pratik ulaşım avantajı.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Bornova Psikoteknik Belgesi:</strong> Bornova'dan çevreyolu ve metro aktarması ile merkezimize ulaşarak uzman psikolog eşliğinde testinizi tamamlayın.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Bayraklı Psikoteknik Belgesi:</strong> Bayraklı ilçesindeki ticari sürücüler için hızlı e-Devlet onaylı psikoteknik değerlendirme raporu hizmeti.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Karşıyaka Psikoteknik Belgesi:</strong> Karşıyaka ve çevresinden gelen sürücülerimiz için randevulu sistem ile 1 saatte psikoteknik raporu imkanı.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Çiğli Psikoteknik Belgesi:</strong> Çiğli ve Atatürk Organize Sanayi bölgesindeki ağır vasıta ve SRC belgesi sahiplerine profesyonel test hizmeti.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Narlıdere Psikoteknik Belgesi:</strong> Narlıdere'den merkezimize kolay ulaşım sağlayarak ehliyet iadesi veya SRC için gerekli raporunuzu oluşturabilirsiniz.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Güzelbahçe Psikoteknik Belgesi:</strong> Güzelbahçe bölgesindeki sürücüler için Sağlık Bakanlığı ruhsatlı yetkili psikoteknik merkezi.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Menderes Psikoteknik Belgesi:</strong> Menderes ve Havalimanı bölgesine yakın konumumuzla hızlı randevu ve güler yüzlü hizmet sunuyoruz.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Torbalı Psikoteknik Belgesi:</strong> Torbalı sanayi ve lojistik alanındaki ticari araç sürücülerine uygun fiyat ve hızlı psikoteknik çözümleri.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Kemalpaşa Psikoteknik Belgesi:</strong> Kemalpaşa lojistik merkezinden gelen kamyon ve tır şoförleri için e-Devlet onaylı psikoteknik testi.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Seferihisar Psikoteknik Belgesi:</strong> Seferihisar ve çevresinden merkezimize başvurarak aynı gün psikoteknik belgenizi teslim alabilirsiniz.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Urla Psikoteknik Belgesi:</strong> Urla'da ticari taşımacılık yapan veya yolcu taşıyan sürücüler için resmi psikoteknik değerlendirme raporu.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Çeşme Psikoteknik Belgesi:</strong> Çeşme ve etrafındaki turizm/transfer sürücüleri için hızlı kayıt ve onay süreçleri.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Selçuk Psikoteknik Belgesi:</strong> Selçuk ilçesinden başvuran sürücülerimize uzman simülatör cihazlarımızla eksiksiz hizmet.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Tire Psikoteknik Belgesi:</strong> Tire ve civarından gelen araç sahipleri için aynı günde sonuçlanan psikoteknik simülasyon testi.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Ödemiş Psikoteknik Belgesi:</strong> Ödemiş bölgesindeki tüm ticari sürücülere resmi mevzuata uygun yetkili rapor düzenleme.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Kiraz Psikoteknik Belgesi:</strong> Kiraz ilçesinden randevu alarak merkezimizde 1 saatlik test sonrası belgenizi e-Devlet üzerinden görüntüleyin.</span></div>
+                    <div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Beydağ Psikoteknik Belgesi:</strong> Beydağ bölgesinden Karabağlar'daki adresimize başvurarak hızlı ve güvenilir psikoteknik belgesi edinin.</span></div>
                 </div>
-
-                <div class="district-items">
     <a href="karabaglar-psikoteknik.html" style="text-decoration: none; color: inherit;"><div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Karabağlar Psikoteknik Belgesi</strong> için tıklayın.</span></div></a>
     <a href="konak-psikoteknik.html" style="text-decoration: none; color: inherit;"><div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Konak Psikoteknik Belgesi</strong> için tıklayın.</span></div></a>
     <a href="buca-psikoteknik.html" style="text-decoration: none; color: inherit;"><div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Buca Psikoteknik Belgesi</strong> için tıklayın.</span></div></a>
@@ -864,102 +887,102 @@
     <a href="kiraz-psikoteknik.html" style="text-decoration: none; color: inherit;"><div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Kiraz Psikoteknik Belgesi</strong> için tıklayın.</span></div></a>
     <a href="beydag-psikoteknik.html" style="text-decoration: none; color: inherit;"><div class="district-item"><i class="fa-solid fa-check"></i> <span><strong>Beydağ Psikoteknik Belgesi</strong> için tıklayın.</span></div></a>
 </div>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 </section>
 
 <!-- GOOGLE İÇİN ZORUNLU LOCAL SEO SCHEMA KODU (SAYFANIN EN ALTINA KOYABİLİRSİNİZ) -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Burak Psikoteknik Değerlendirme Merkezi",
-  "image": "https://burakpsikoteknik.com/logo.png",
-  "@id": "https://burakpsikoteknik.com",
-  "url": "https://burakpsikoteknik.com",
-  "telephone": "+905303100883",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
-    "addressLocality": "Karabağlar",
-    "addressRegion": "İzmir",
-    "postalCode": "35380",
-    "addressCountry": "TR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 38.3845,
-    "longitude": 27.1350
-  },
-  "areaServed": [
-    "Karabağlar", "Konak", "Buca", "Gaziemir", "Balçova", "Bornova", "Bayraklı", 
-    "Karşıyaka", "Çiğli", "Narlıdere", "Güzelbahçe", "Menderes", "Torbalı", 
-    "Kemalpaşa", "Seferihisar", "Urla", "Çeşme", "Selçuk", "Tire", "Ödemiş", "Kiraz", "Beydağ"
-  ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:00",
-    "closes": "19:00"
-  }
+"@context": "https://schema.org",
+"@type": "MedicalBusiness",
+"name": "Burak Psikoteknik Değerlendirme Merkezi",
+"image": "https://burakpsikoteknik.com/logo.png",
+"@id": "https://burakpsikoteknik.com",
+"url": "https://burakpsikoteknik.com",
+"telephone": "+905303100883",
+"priceRange": "$$",
+"address": {
+"@type": "PostalAddress",
+"streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
+"addressLocality": "Karabağlar",
+"addressRegion": "İzmir",
+"postalCode": "35380",
+"addressCountry": "TR"
+},
+"geo": {
+"@type": "GeoCoordinates",
+"latitude": 38.3845,
+"longitude": 27.1350
+},
+"areaServed": [
+"Karabağlar", "Konak", "Buca", "Gaziemir", "Balçova", "Bornova", "Bayraklı", 
+"Karşıyaka", "Çiğli", "Narlıdere", "Güzelbahçe", "Menderes", "Torbalı", 
+"Kemalpaşa", "Seferihisar", "Urla", "Çeşme", "Selçuk", "Tire", "Ödemiş", "Kiraz", "Beydağ"
+],
+"openingHoursSpecification": {
+"@type": "OpeningHoursSpecification",
+"dayOfWeek": [
+"Monday",
+"Tuesday",
+"Wednesday",
+"Thursday",
+"Friday",
+"Saturday"
+],
+"opens": "09:00",
+"closes": "19:00"
+}
 }
 </script>
-                    <!-- CANLI ADRES HARİTASI -->
-                    <div class="map-wrapper">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- CANLI ADRES HARİTASI -->
+<div class="map-wrapper">
+<iframe 
+src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+</div>
+</div>
+</section>
 
-    </main>
+</main>
 
-    <!-- Ekranın Sağ Altında Sabit Duran Butonlar -->
-    <div class="floating-actions">
-        <a href="tel:05303100883" class="float-btn float-call" title="Hemen Ara">
-            <i class="fa-solid fa-phone"></i>
-        </a>
-        <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Bilgi">
-            <i class="fa-brands fa-whatsapp"></i>
-        </a>
-    </div>
+<!-- Ekranın Sağ Altında Sabit Duran Butonlar -->
+<div class="floating-actions">
+<a href="tel:05303100883" class="float-btn float-call" title="Hemen Ara">
+<i class="fa-solid fa-phone"></i>
+</a>
+<a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Bilgi">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+</div>
 
-    <!-- Alt Bilgi (Footer) -->
-    <footer>
-        <p>&copy; 2026 Burak Psikoteknik Değerlendirme Merkezi. Tüm Hakları Saklıdır.</p>
-        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: #64748b;">Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir | Tel: 0530 310 08 83</p>
-    </footer>
+<!-- Alt Bilgi (Footer) -->
+<footer>
+<p>&copy; 2026 Burak Psikoteknik Değerlendirme Merkezi. Tüm Hakları Saklıdır.</p>
+<p style="font-size: 0.85rem; margin-top: 0.5rem; color: #64748b;">Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir | Tel: 0530 310 08 83</p>
+</footer>
 
-    <!-- SSS Akordiyon Çalıştırma Kodu -->
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const faqItem = item.parentElement;
-                
-                document.querySelectorAll('.faq-item').forEach(otherItem => {
-                    if (otherItem !== faqItem) {
-                        otherItem.classList.remove('active');
-                    }
-                });
+<!-- SSS Akordiyon Çalıştırma Kodu -->
+<script>
+document.querySelectorAll('.faq-question').forEach(item => {
+item.addEventListener('click', () => {
+const faqItem = item.parentElement;
 
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
+document.querySelectorAll('.faq-item').forEach(otherItem => {
+if (otherItem !== faqItem) {
+otherItem.classList.remove('active');
+}
+});
+
+faqItem.classList.toggle('active');
+});
+});
+</script>
 
 </body>
 </html>
