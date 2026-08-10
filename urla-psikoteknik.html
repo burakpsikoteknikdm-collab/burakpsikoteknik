@@ -20,33 +20,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-    <!-- Google Schema.org Structure (LocalBusiness & areaServed: Urla) -->
+    <!-- Google Schema.org Structure (LocalBusiness + FAQPage) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["LocalBusiness", "MedicalBusiness"],
-      "@id": "https://burakpsikoteknik.com/#organization",
-      "name": "Burak Psikoteknik Değerlendirme Merkezi",
-      "url": "https://burakpsikoteknik.com/urla-psikoteknik.html",
-      "telephone": "+905303100883",
-      "priceRange": "$$",
-      "image": "https://burakpsikoteknik.com/cihaz.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
-        "addressLocality": "Karabağlar",
-        "addressRegion": "İzmir",
-        "postalCode": "35380",
-        "addressCountry": "TR"
-      },
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Urla",
-        "containedIn": {
-          "@type": "AdministrativeArea",
-          "name": "İzmir"
+      "@graph": [
+        {
+          "@type": ["LocalBusiness", "MedicalBusiness"],
+          "@id": "https://burakpsikoteknik.com/#organization",
+          "name": "Burak Psikoteknik Değerlendirme Merkezi",
+          "url": "https://burakpsikoteknik.com/urla-psikoteknik.html",
+          "telephone": "+905303100883",
+          "priceRange": "$$",
+          "image": "https://burakpsikoteknik.com/cihaz.png",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
+            "addressLocality": "Karabağlar",
+            "addressRegion": "İzmir",
+            "postalCode": "35380",
+            "addressCountry": "TR"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Urla",
+            "containedIn": {
+              "@type": "AdministrativeArea",
+              "name": "İzmir"
+            }
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Urla'dan randevusuz gelebilir miyim?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sıra beklemeden 1 saat içinde işleminizi tamamlayabilmemiz için gelmeden önce telefon veya WhatsApp üzerinden randevu almanızı tavsiye ederiz."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Psikoteknik testi ne kadar sürer ve ne zaman e-Devlet'e düşer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Simülatör testimiz tam 1 saat sürmektedir. Test bitiminde raporunuz anında e-Devlet sistemine işlenmektedir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Urla psikoteknik testi için hangi belgeler gereklidir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sadece ehliyetiniz ve kimlik kartınızla merkezimize gelmeniz test için yeterlidir."
+              }
+            }
+          ]
         }
-      }
+      ]
     }
     </script>
 
@@ -59,6 +92,7 @@
         .back-link { text-decoration: none; color: var(--secondary-color); font-weight: 600; font-size: 0.95rem; }
         .container { max-width: 850px; margin: 2rem auto; background: white; padding: 2.5rem; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
         h1 { font-size: clamp(1.5rem, 4vw, 2rem); color: var(--primary-color); margin-bottom: 1.2rem; border-bottom: 3px solid var(--secondary-color); padding-bottom: 0.5rem; }
+        h2 { font-size: 1.2rem; color: var(--primary-color); margin: 1.8rem 0 1rem 0; font-weight: 700; }
         p { margin-bottom: 1.2rem; font-size: 1.05rem; color: #475569; line-height: 1.7; }
         
         .cta-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 2rem 0; }
@@ -70,6 +104,16 @@
         .device-image { width: 100%; height: auto; max-height: 400px; object-fit: cover; border-radius: 8px; margin-top: 1.5rem; }
         .info-box { background-color: #eff6ff; border-left: 4px solid var(--secondary-color); padding: 1rem 1.25rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
         .info-box p { margin-bottom: 0; font-weight: 600; color: var(--primary-color); }
+        
+        /* SSS Stil Alanı */
+        .faq-item { border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+        .faq-question { background: #f8fafc; padding: 12px 16px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--primary-color); }
+        .faq-answer { padding: 12px 16px; background: #ffffff; color: #475569; display: none; font-size: 0.95rem; border-top: 1px solid #e2e8f0; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+
+        .nearby-districts { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; font-size: 0.9rem; color: #64748b; }
+        .nearby-districts a { color: var(--secondary-color); text-decoration: none; font-weight: 600; }
         
         footer { text-align: center; margin-top: 3rem; padding: 2rem; color: #94a3b8; font-size: 0.85rem; }
     </style>
@@ -89,8 +133,6 @@
             <p><i class="fa-solid fa-clock"></i> 1 Saatte Test Tamamlama | <i class="fa-solid fa-file-circle-check"></i> Anında e-Devlet Onayı | <i class="fa-solid fa-shield-halved"></i> Bakanlık Onaylı Cihazlar</p>
         </div>
 
-        <p>Urla Çeşmealtı, Sanayi Sitesi ve merkez bölgesinden Karabağlar'daki yetkili merkezimize doğrudan ulaşabilir, telefon veya WhatsApp hattımız üzerinden randevu alarak işleminizi hemen tamamlayabilirsiniz.</p>
-
         <div class="cta-buttons">
             <a href="https://wa.me/905303100883?text=Merhaba,%20Urla'dan%20psikoteknik%20randevusu%20almak%20istiyorum." class="btn btn-whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i> WhatsApp Randevu Al
@@ -100,11 +142,52 @@
             </a>
         </div>
 
+        <h2>Sıkça Sorulan Sorular</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Urla'dan randevusuz gelebilir miyim?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Sıra beklemeden 1 saat içinde işleminizi tamamlayabilmemiz için gelmeden önce telefon veya WhatsApp üzerinden randevu almanızı tavsiye ederiz.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Test ne kadar sürer ve e-Devlet'e ne zaman düşer?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Simülatör testimiz tam 1 saat sürmektedir. Test bitiminde raporunuz anında e-Devlet sistemine işlenmektedir.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span><i class="fa-solid fa-circle-question"></i> Teste gelirken hangi belgeler gereklidir?</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">Sadece ehliyetiniz ve T.C. kimlik kartınızla merkezimize gelmeniz yeterlidir. Extra bir evrak gerekmez.</div>
+            </div>
+        </div>
+
         <img src="cihaz.png" alt="Urla Psikoteknik Cihazı Değerlendirmesi" class="device-image" width="800" height="400" loading="lazy" decoding="async">
+
+        <!-- Komşu İlçeler İç Linkleme -->
+        <div class="nearby-districts">
+            <strong>Çevre İlçeler:</strong> 
+            <a href="cesme-psikoteknik.html">Çeşme Psikoteknik</a> | 
+            <a href="guzelbahce-psikoteknik.html">Güzelbahçe Psikoteknik</a> | 
+            <a href="seferihisar-psikoteknik.html">Seferihisar Psikoteknik</a>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 Burak Psikoteknik Değerlendirme Merkezi - Tüm Hakları Saklıdır.</p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', () => {
+                q.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
