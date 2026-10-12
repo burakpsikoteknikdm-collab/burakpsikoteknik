@@ -3,13 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Burak Psikoteknik Değerlendirme Merkezi - İzmir Psikoteknik Belgesi ve Randevu</title>
 <meta name="description" content="Burak Psikoteknik Değerlendirme Merkezi - İzmir Karabağlar, Konak, Buca, Gaziemir ve tüm ilçeler için Sağlık Bakanlığı onaylı, hızlı ve güvenilir Psikoteknik Belgesi. Hızlı randevu alın.">
-<meta name="keywords" content="izmir psikoteknik belgesi, karabağlar psikoteknik, buca psikoteknik, konak psikoteknik, bornova psikoteknik, psikoteknik nedir, src belgesi izmir">
 <meta name="author" content="Burak Psikoteknik Değerlendirme Merkezi">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://burakpsikoteknik.com/">
+<link rel="icon" href="logo.png">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Burak Psikoteknik Değerlendirme Merkezi | İzmir">
@@ -19,7 +18,7 @@
 <meta property="og:image" content="https://burakpsikoteknik.com/logo.png">
 <meta property="og:locale" content="tr_TR">
 
-<!-- Google Schema.org Structure -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,8 +45,8 @@
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "08:00",
-    "closes":"23:00"
+    "opens": "09:00",
+    "closes": "19:00"
   }
 }
 </script>
@@ -85,548 +84,88 @@
 }
 </script>
 
-<!-- FontAwesome Icons (Asenkron / Performanslı Yükleme) -->
+<!-- FontAwesome Icons (asenkron yükleme) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
 <style>
-:root {
-  --primary-color: #0b3c5d;
-  --primary-dark: #07273d;
-  --secondary-color: #328cc1;
-  --accent-green: #25d366;
-  --accent-blue: #007bff;
-  --text-dark: #2c3e50;
-  --bg-light: #f8fafc;
-  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  scroll-behavior: smooth;
-}
-
-body {
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-.top-bar {
-  background-color: var(--primary-dark);
-  color: #d1d5db;
-  font-size: 0.875rem;
-  padding: 0.6rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.top-bar a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-header {
-  background-color: #ffffff;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  padding: 0.8rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
-
-.logo img {
-  height: 60px;
-  width: auto;
-  border-radius: 8px;
-}
-
-.logo-text h1 {
-  font-size: clamp(1.1rem, 3.5vw, 1.6rem);
-  color: var(--primary-color);
-  font-weight: 800;
-  line-height: 1.2;
-}
-
-.logo-text span {
-  font-size: clamp(0.7rem, 2vw, 0.85rem);
-  color: #6b7280;
-  display: block;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 6px 4px;
-  transition: color 0.2s;
-}
-
-nav a:hover {
-  color: var(--secondary-color);
-}
-
-.hero {
-  background: linear-gradient(135deg, #0b3c5d 0%, #07273d 100%);
-  color: white;
-  padding: 4rem 5% 3.5rem 5%;
-  text-align: center;
-}
-
-.hero-badge {
-  background-color: rgba(50, 140, 193, 0.25);
-  border: 1px solid var(--secondary-color);
-  color: #93c5fd;
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-block;
-  margin-bottom: 1.5rem;
-}
-
-.hero h2 {
-  font-size: clamp(1.5rem, 5vw, 2.3rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: clamp(0.95rem, 3vw, 1.1rem);
-  max-width: 700px;
-  margin: 0 auto 2rem auto;
-  color: #e2e8f0;
-}
-
-.hero-cta {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 14px 26px;
-  border-radius: 8px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: transform 0.2s, background-color 0.2s;
-}
-
-.btn-primary {
-  background-color: var(--accent-green);
-  color: white;
-}
-
-.btn-secondary {
-  background-color: #ffffff;
-  color: var(--primary-color);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.section-header h2 {
-  font-size: clamp(1.4rem, 4vw, 2rem);
-  color: var(--primary-color);
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-}
-
-.section-header p {
-  color: #64748b;
-  font-size: clamp(0.9rem, 2.5vw, 1rem);
-}
-
-.device-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  background: white;
-  padding: 2.5rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  margin-bottom: 3rem;
-}
-
-.device-text {
-  flex: 1 1 300px;
-}
-
-.device-text h2 {
-  font-size: clamp(1.3rem, 4vw, 2rem);
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.device-image-container {
-  flex: 1 1 280px;
-  text-align: center;
-}
-
-.animated-device {
-  width: 100%;
-  max-width: 380px;
-  height: auto;
-  animation: float 4s ease-in-out infinite;
-  will-change: transform;
-  transform: translateZ(0);
-}
-
-@keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-  100% { transform: translateY(0px); }
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: white;
-  padding: 1.8rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  border: 1px solid #e2e8f0;
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #eff6ff;
-  color: var(--secondary-color);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-/* KASMAMASI İÇİN SSS GRID ANIMASYON YAPISI */
-.faq-container {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.faq-item {
-  background: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.faq-question {
-  padding: 1.1rem 1.25rem;
-  font-weight: 700;
-  font-size: clamp(0.95rem, 3vw, 1.05rem);
-  color: var(--primary-color);
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  user-select: none;
-  background: white;
-  gap: 10px;
-}
-
-.faq-question i {
-  color: var(--secondary-color);
-  transition: transform 0.25s ease;
-  flex-shrink: 0;
-}
-
-.faq-answer {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: #f8fafc;
-}
-
-.faq-answer-content {
-  overflow: hidden;
-  padding: 0 1.25rem;
-  color: #475569;
-  font-size: 0.95rem;
-  transition: padding 0.25s ease;
-}
-
-.faq-item.active .faq-answer {
-  grid-template-rows: 1fr;
-  border-top: 1px solid #e2e8f0;
-}
-
-.faq-item.active .faq-answer-content {
-  padding: 1rem 1.25rem;
-}
-
-.faq-item.active .faq-question i {
-  transform: rotate(180deg);
-}
-
-.src-badge-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.src-badge {
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  padding: 8px 10px;
-  border-radius: 6px;
-  font-size: 0.85rem;
-}
-
-.src-badge strong {
-  color: var(--primary-color);
-  display: block;
-}
-
-.location-section {
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  border: 1px solid #e2e8f0;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.location-header-bar {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1.25rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.location-header-bar h3 {
-  font-size: clamp(1.05rem, 3.5vw, 1.3rem);
-}
-
-.location-content-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-}
-
-.district-list-container {
-  padding: 1.5rem;
-  background-color: #ffffff;
-}
-
-.address-box {
-  background-color: #f1f5f9;
-  border-left: 4px solid var(--secondary-color);
-  padding: 1rem;
-  border-radius: 0 8px 8px 0;
-  margin-bottom: 1.25rem;
-  font-size: 0.9rem;
-}
-
-.address-box p {
-  font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.3rem;
-}
-
-.district-items {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 450px;
-  overflow-y: auto;
-  padding-right: 5px;
-}
-
-.district-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-.district-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.9rem;
-  color: #334155;
-  background-color: #f8fafc;
-  padding: 10px 12px;
-  border-radius: 6px;
-  border: 1px solid #f1f5f9;
-  transition: background-color 0.2s, border-color 0.2s;
-}
-
-.district-link:hover .district-item {
-  background-color: #eff6ff;
-  border-color: #bfdbfe;
-}
-
-.district-item i {
-  color: #10b981;
-  flex-shrink: 0;
-}
-
-.map-wrapper {
-  width: 100%;
-  height: 100%;
-  min-height: 380px;
-  background-color: #e2e8f0;
-}
-
-.map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 380px;
-  border: 0;
-}
-
-.floating-actions {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1000;
-}
-
-.float-btn {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  font-size: 1.5rem;
-  transition: transform 0.2s;
-}
-
-.float-btn:hover {
-  transform: scale(1.08);
-}
-
-.float-whatsapp {
-  background-color: var(--accent-green);
-}
-
-.float-call {
-  background-color: var(--accent-blue);
-}
-
-footer {
-  background-color: var(--primary-dark);
-  color: #94a3b8;
-  padding: 2.5rem 5% 1.5rem 5%;
-  margin-top: 3rem;
-  text-align: center;
-}
-
-@media (max-width: 900px) {
-  .location-content-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .top-bar {
-    justify-content: center;
-    text-align: center;
-  }
-  header {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 1rem 3%;
-  }
-  .logo {
-    flex-direction: column;
-    gap: 8px;
-  }
-  nav ul {
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
-  }
-  .hero-cta {
-    flex-direction: column;
-    width: 100%;
-  }
-  .btn {
-    width: 100%;
-  }
-  .device-section {
-    padding: 1.5rem;
-    text-align: center;
-  }
+:root{--primary-color:#0b3c5d;--primary-dark:#07273d;--secondary-color:#328cc1;--accent-green:#25d366;--accent-blue:#007bff;--text-dark:#2c3e50;--bg-light:#f8fafc;--shadow:0 4px 12px rgba(0,0,0,.05)}
+*{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;scroll-behavior:smooth}
+body{background-color:var(--bg-light);color:var(--text-dark);line-height:1.6}
+.top-bar{background-color:var(--primary-dark);color:#d1d5db;font-size:.875rem;padding:.6rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.top-bar a{color:#fff;text-decoration:none;font-weight:600}
+header{background-color:#fff;position:sticky;top:0;z-index:999;box-shadow:0 2px 10px rgba(0,0,0,.08);padding:.8rem 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{height:60px;width:auto;border-radius:8px}
+.brand{font-size:clamp(1.1rem,3.5vw,1.6rem);color:var(--primary-color);font-weight:800;line-height:1.2}
+.logo-text span{font-size:clamp(.7rem,2vw,.85rem);color:#6b7280;display:block;text-transform:uppercase;letter-spacing:1px;font-weight:700}
+nav ul{display:flex;list-style:none;gap:15px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--text-dark);font-weight:600;font-size:.95rem;padding:6px 4px;transition:color .2s}
+nav a:hover{color:var(--secondary-color)}
+.hero{background:linear-gradient(135deg,#0b3c5d 0%,#07273d 100%);color:#fff;padding:4rem 5% 3.5rem;text-align:center}
+.hero-badge{background-color:rgba(50,140,193,.25);border:1px solid var(--secondary-color);color:#93c5fd;padding:6px 16px;border-radius:50px;font-size:.85rem;font-weight:600;display:inline-block;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(1.5rem,5vw,2.3rem);font-weight:800;margin-bottom:1rem}
+.hero p{font-size:clamp(.95rem,3vw,1.1rem);max-width:700px;margin:0 auto 2rem;color:#e2e8f0}
+.hero-cta{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.btn{padding:14px 26px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .2s,background-color .2s}
+.btn-primary{background-color:var(--accent-green);color:#fff}
+.btn-secondary{background-color:#fff;color:var(--primary-color)}
+.btn:hover{transform:translateY(-2px)}
+.container{max-width:1200px;margin:0 auto;padding:3rem 1rem}
+.section-header{text-align:center;margin-bottom:2.5rem}
+.section-header h2{font-size:clamp(1.4rem,4vw,2rem);color:var(--primary-color);font-weight:800;margin-bottom:.5rem}
+.section-header p{color:#64748b;font-size:clamp(.9rem,2.5vw,1rem)}
+.device-section{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem;background:#fff;padding:2.5rem;border-radius:16px;box-shadow:var(--shadow);margin-bottom:3rem}
+.device-text{flex:1 1 300px}
+.device-text h2{font-size:clamp(1.3rem,4vw,2rem);color:var(--primary-color);margin-bottom:1rem}
+.device-image-container{flex:1 1 280px;text-align:center}
+.animated-device{width:100%;max-width:380px;height:auto;animation:float 4s ease-in-out infinite;will-change:transform;transform:translateZ(0)}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.card{background:#fff;padding:1.8rem;border-radius:12px;box-shadow:var(--shadow);border:1px solid #e2e8f0}
+.card-icon{width:50px;height:50px;background-color:#eff6ff;color:var(--secondary-color);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem}
+.card h3{font-size:1.2rem;color:var(--primary-color);margin-bottom:.5rem}
+.faq-container{max-width:900px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:#fff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden}
+.faq-question{padding:1.1rem 1.25rem;font-weight:700;font-size:clamp(.95rem,3vw,1.05rem);color:var(--primary-color);cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;background:#fff;gap:10px}
+.faq-question i{color:var(--secondary-color);transition:transform .25s ease;flex-shrink:0}
+.faq-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s cubic-bezier(.4,0,.2,1);background-color:#f8fafc}
+.faq-answer-content{overflow:hidden;padding:0 1.25rem;color:#475569;font-size:.95rem;transition:padding .25s ease}
+.faq-item.active .faq-answer{grid-template-rows:1fr;border-top:1px solid #e2e8f0}
+.faq-item.active .faq-answer-content{padding:1rem 1.25rem}
+.faq-item.active .faq-question i{transform:rotate(180deg)}
+.src-badge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:10px}
+.src-badge{background:#fff;border:1px solid #cbd5e1;padding:8px 10px;border-radius:6px;font-size:.85rem}
+.src-badge strong{color:var(--primary-color);display:block}
+.location-section{background-color:#fff;border-radius:16px;box-shadow:var(--shadow);border:1px solid #e2e8f0;overflow:hidden;margin-top:2rem}
+.location-header-bar{background-color:var(--primary-color);color:#fff;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:15px}
+.location-header-bar h3{font-size:clamp(1.05rem,3.5vw,1.3rem)}
+.location-content-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.district-list-container{padding:1.5rem;background-color:#fff}
+.address-box{background-color:#f1f5f9;border-left:4px solid var(--secondary-color);padding:1rem;border-radius:0 8px 8px 0;margin-bottom:1.25rem;font-size:.9rem}
+.address-box p{font-weight:600;color:var(--primary-color);margin-bottom:.3rem}
+.district-items{display:flex;flex-direction:column;gap:8px;max-height:450px;overflow-y:auto;padding-right:5px}
+.district-link{text-decoration:none;color:inherit;display:block}
+.district-item{display:flex;align-items:center;gap:10px;font-size:.9rem;color:#334155;background-color:#f8fafc;padding:10px 12px;border-radius:6px;border:1px solid #f1f5f9;transition:background-color .2s,border-color .2s}
+.district-link:hover .district-item{background-color:#eff6ff;border-color:#bfdbfe}
+.district-item i{color:#10b981;flex-shrink:0}
+.map-wrapper{width:100%;height:100%;min-height:380px;background-color:#e2e8f0}
+.map-wrapper iframe{width:100%;height:100%;min-height:380px;border:0}
+.floating-actions{position:fixed;bottom:20px;right:20px;display:flex;flex-direction:column;gap:12px;z-index:1000}
+.float-btn{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.2);font-size:1.5rem;transition:transform .2s}
+.float-btn:hover{transform:scale(1.08)}
+.float-whatsapp{background-color:var(--accent-green)}
+.float-call{background-color:var(--accent-blue)}
+footer{background-color:var(--primary-dark);color:#94a3b8;padding:2.5rem 5% 1.5rem;margin-top:3rem;text-align:center}
+@media (max-width:900px){.location-content-grid{grid-template-columns:1fr}}
+@media (max-width:768px){
+.top-bar{justify-content:center;text-align:center}
+header{flex-direction:column;justify-content:center;text-align:center;padding:1rem 3%}
+.logo{flex-direction:column;gap:8px}
+nav ul{justify-content:center;width:100%;gap:10px}
+.hero-cta{flex-direction:column;width:100%}
+.btn{width:100%}
+.device-section{padding:1.5rem;text-align:center}
 }
 </style>
 </head>
@@ -634,7 +173,7 @@ footer {
 
 <div class="top-bar">
   <div>
-    <span><i class="fa-solid fa-clock"></i> Pzt - Cmt: 09:00 - 19:00</span> | 
+    <span><i class="fa-solid fa-clock"></i> Pzt - Cmt: 09:00 - 19:00</span> |
     <span><i class="fa-solid fa-location-dot"></i> Karabağlar / İzmir</span>
   </div>
   <div>
@@ -646,7 +185,7 @@ footer {
   <a href="/" class="logo">
     <img src="logo.png" alt="Burak Psikoteknik Logo" width="60" height="60" decoding="async">
     <div class="logo-text">
-      <h1>BURAK PSİKOTEKNİK</h1>
+      <div class="brand">BURAK PSİKOTEKNİK</div>
       <span>Değerlendirme Merkezi</span>
     </div>
   </a>
@@ -654,7 +193,7 @@ footer {
     <ul>
       <li><a href="#hizmetler">Hizmetler</a></li>
       <li><a href="#sss">S.S.S / Rehber</a></li>
-      <li><a href="#ulasim">Ulaşım & İlçeler</a></li>
+      <li><a href="#ulasim">Ulaşım &amp; İlçeler</a></li>
       <li><a href="tel:05303100883" style="color: var(--accent-blue);"><i class="fa-solid fa-phone"></i> Randevu Al</a></li>
     </ul>
   </nav>
@@ -662,10 +201,10 @@ footer {
 
 <section class="hero">
   <span class="hero-badge"><i class="fa-solid fa-shield-halved"></i> T.C. Sağlık Bakanlığı Onaylı Yetkili Merkez</span>
-  <h2>İzmir Psikoteknik Belgesi Randevu Merkezi</h2>
+  <h1>İzmir Psikoteknik Belgesi Randevu Merkezi</h1>
   <p>Ticari araç sürücüleri için gerekli olan Psikoteknik Değerlendirme Raporunuzu alanında Yetkili Psikolog eşliğinde hazırlıyoruz.</p>
   <div class="hero-cta">
-    <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="btn btn-primary" target="_blank">
+    <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="btn btn-primary" target="_blank" rel="noopener">
       <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Bilgi Al
     </a>
     <a href="tel:05303100883" class="btn btn-secondary">
@@ -682,10 +221,10 @@ footer {
       <p>Merkezimizde psikoteknik test cihazımızda dikkat, refleks, algı, muhakeme ve koordinasyon yetenekleriniz dijital ortamda ölçümlenir.</p>
       <br>
       <p><strong><i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> Ortalama 1 Saatlik Detaylı Test Süreci</strong></p>
-      <p><strong><i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> Alanında Tecrübeli Psikolog Eşliğinde </strong></p>
+      <p><strong><i class="fa-solid fa-circle-check" style="color: var(--accent-green);"></i> Alanında Tecrübeli Psikolog Eşliğinde</strong></p>
     </div>
     <div class="device-image-container">
-      <img src="cihaz.png" alt="İzmir Psikoteknik Cihazı Simülatör" class="animated-device" decoding="async">
+      <img src="cihaz.png" alt="İzmir Psikoteknik Cihazı Simülatör" class="animated-device" loading="lazy" decoding="async">
     </div>
   </section>
 
@@ -716,7 +255,7 @@ footer {
 
   <section id="sss" style="margin-top: 4rem;">
     <div class="section-header">
-      <h2>Sıkça Sorulan Sorular & Bilgi Rehberi</h2>
+      <h2>Sıkça Sorulan Sorular &amp; Bilgi Rehberi</h2>
       <p>Psikoteknik ve SRC belgeleri hakkında tüm merak ettikleriniz</p>
     </div>
 
@@ -728,7 +267,7 @@ footer {
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            <p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon vb.) kullanan, ehliyeti daimi iptal olan yada ilgili maddelerden ceza uygulanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur.</p>
+            <p>Psikoteknik belgesi, ticari araç (taksi, otobüs, minibüs, kamyon vb.) kullanan, ehliyeti daimi iptal olan ya da ilgili maddelerden ceza uygulanan sürücülerin bedensel ve zihinsel durumlarının sürücülük yapmaya uygun olduğunu gösteren Sağlık Bakanlığı onaylı bir rapordur.</p>
           </div>
         </div>
       </div>
@@ -802,7 +341,7 @@ footer {
 
   <section id="ulasim" style="margin-top: 4rem;">
     <div class="section-header">
-      <h2>İzmir Psikoteknik Hizmet Bölgelerimiz & Ulaşım</h2>
+      <h2>İzmir Psikoteknik Hizmet Bölgelerimiz &amp; Ulaşım</h2>
       <p>İzmir'in tüm ilçelerinden Karabağlar'daki yetkili merkezimize kolayca ulaşabilirsiniz.</p>
     </div>
 
@@ -822,51 +361,34 @@ footer {
           </div>
 
           <div class="district-items">
-            <a href="karabaglar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karabağlar Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="konak-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Konak Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="buca-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Buca Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="gaziemir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Gaziemir Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="balcova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Balçova Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="bornova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bornova Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="bayrakli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayraklı Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="karsiyaka-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karşıyaka Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="cigli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çiğli Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="narlidere-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Narlıdere Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="guzelbahce-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Güzelbahçe Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="menderes-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Menderes Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="torbali-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Torbalı Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="kemalpasa-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kemalpaşa Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="seferihisar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Seferihisar Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="urla-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Urla Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="cesme-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çeşme Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="selcuk-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Selçuk Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="tire-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Tire Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="odemis-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Ödemiş Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="kiraz-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kiraz Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="beydag-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Beydağ Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
-            <a href="bayindir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayındır Psikoteknik Belgesi</strong> İçin Tıklayınız</span></div></a>
+            <a href="karabaglar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karabağlar Psikoteknik Belgesi</strong></span></div></a>
+            <a href="konak-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Konak Psikoteknik Belgesi</strong></span></div></a>
+            <a href="buca-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Buca Psikoteknik Belgesi</strong></span></div></a>
+            <a href="gaziemir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Gaziemir Psikoteknik Belgesi</strong></span></div></a>
+            <a href="balcova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Balçova Psikoteknik Belgesi</strong></span></div></a>
+            <a href="bornova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bornova Psikoteknik Belgesi</strong></span></div></a>
+            <a href="bayrakli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayraklı Psikoteknik Belgesi</strong></span></div></a>
+            <a href="karsiyaka-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karşıyaka Psikoteknik Belgesi</strong></span></div></a>
+            <a href="cigli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çiğli Psikoteknik Belgesi</strong></span></div></a>
+            <a href="narlidere-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Narlıdere Psikoteknik Belgesi</strong></span></div></a>
+            <a href="guzelbahce-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Güzelbahçe Psikoteknik Belgesi</strong></span></div></a>
+            <a href="menderes-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Menderes Psikoteknik Belgesi</strong></span></div></a>
+            <a href="torbali-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Torbalı Psikoteknik Belgesi</strong></span></div></a>
+            <a href="kemalpasa-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kemalpaşa Psikoteknik Belgesi</strong></span></div></a>
+            <a href="seferihisar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Seferihisar Psikoteknik Belgesi</strong></span></div></a>
+            <a href="urla-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Urla Psikoteknik Belgesi</strong></span></div></a>
+            <a href="cesme-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çeşme Psikoteknik Belgesi</strong></span></div></a>
+            <a href="selcuk-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Selçuk Psikoteknik Belgesi</strong></span></div></a>
+            <a href="tire-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Tire Psikoteknik Belgesi</strong></span></div></a>
+            <a href="odemis-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Ödemiş Psikoteknik Belgesi</strong></span></div></a>
+            <a href="kiraz-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kiraz Psikoteknik Belgesi</strong></span></div></a>
+            <a href="beydag-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Beydağ Psikoteknik Belgesi</strong></span></div></a>
+            <a href="bayindir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayındır Psikoteknik Belgesi</strong></span></div></a>
           </div>
         </div>
 
         <div class="map-wrapper">
-          <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalBusiness",
-            "name": "Burak Psikoteknik Değerlendirme Merkezi",
-            "image": "https://burakpsikoteknik.com/logo.png",
-            "telephone": "+905303100883",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6",
-              "addressLocality": "Karabağlar",
-              "addressRegion": "İzmir",
-              "postalCode": "35380",
-              "addressCountry": "TR"
-            }
-          }
-          </script>
-          <iframe src="about:blank" data-src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&t=&z=15&ie=UTF8&iwloc=&output=embed" id="lazy-map" allowfullscreen="" loading="lazy" title="Harita"></iframe>
+          <iframe src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" allowfullscreen="" loading="lazy" title="Burak Psikoteknik harita konumu"></iframe>
         </div>
       </div>
     </div>
@@ -878,7 +400,7 @@ footer {
   <a href="tel:05303100883" class="float-btn float-call" title="Hemen Ara">
     <i class="fa-solid fa-phone"></i>
   </a>
-  <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="float-btn float-whatsapp" target="_blank" title="WhatsApp Bilgi">
+  <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="float-btn float-whatsapp" target="_blank" rel="noopener" title="WhatsApp Bilgi">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 </div>
@@ -889,29 +411,15 @@ footer {
 </footer>
 
 <script>
-  // FAQ Accordion (Yüksek Performanslı Toggle)
+  // SSS açılır-kapanır yapısı
   document.querySelectorAll('.faq-question').forEach(item => {
     item.addEventListener('click', () => {
       const faqItem = item.parentElement;
-      
       document.querySelectorAll('.faq-item').forEach(otherItem => {
-        if (otherItem !== faqItem) {
-          otherItem.classList.remove('active');
-        }
+        if (otherItem !== faqItem) otherItem.classList.remove('active');
       });
-
       faqItem.classList.toggle('active');
     });
-  });
-
-  // Lazy Load Google Map (Kasmayı engelleyen ertelemeli yükleme)
-  window.addEventListener('scroll', function loadMapOnScroll() {
-    var mapIframe = document.getElementById('lazy-map');
-    if (mapIframe && mapIframe.getAttribute('data-src')) {
-      mapIframe.src = mapIframe.getAttribute('data-src');
-      mapIframe.removeAttribute('data-src');
-      window.removeEventListener('scroll', loadMapOnScroll);
-    }
   });
 </script>
 
