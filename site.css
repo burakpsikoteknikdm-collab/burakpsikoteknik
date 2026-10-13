@@ -273,3 +273,7 @@ html{scroll-behavior:auto}
 .nearby-chips a i{color:#10b981}
 .nearby-chips a:hover i{color:#fff}
 @media (max-width:768px){.page-hero{padding:2.75rem 5% 3rem}.chip{font-size:.8rem;padding:6px 12px}}
+.official-note{display:flex;gap:12px;align-items:flex-start;margin-top:1.4rem;padding:1rem 1.15rem;border-radius:14px;background:#f1f7fc;border:1px solid rgba(50,140,193,.2);color:#475569;font-size:.92rem;line-height:1.65;text-align:left}
+.official-note i{color:var(--secondary-color);margin-top:4px;flex-shrink:0}
+.official-note strong{color:var(--primary-color)}
+#hizmetler .official-note{max-width:900px;margin:1.75rem auto 0}
