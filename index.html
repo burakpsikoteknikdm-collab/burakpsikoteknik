@@ -311,6 +311,63 @@ footer{background:linear-gradient(160deg,var(--primary-color),var(--primary-dark
 .js .reveal.in{animation:revealUp .95s var(--ease) var(--d,0s) both}
 @keyframes revealUp{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
 
+/* ---------- Ulaşım & İlçeler ---------- */
+.loc-card{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--shadow-lg)}
+.loc-info{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;gap:1.15rem;padding:2rem;color:#fff;background:radial-gradient(420px 260px at 100% 0%,rgba(50,140,193,.35),transparent 65%),linear-gradient(160deg,#0d4468,#07273d)}
+.loc-info::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:36px 36px;-webkit-mask-image:linear-gradient(160deg,#000,transparent 80%);mask-image:linear-gradient(160deg,#000,transparent 80%)}
+.loc-info h3{font-size:clamp(1.1rem,3.5vw,1.3rem);line-height:1.3;margin-bottom:.2rem}
+.loc-row{display:flex;gap:12px;align-items:flex-start;font-size:.95rem;line-height:1.5}
+.loc-row .ic{width:40px;height:40px;border-radius:12px;flex-shrink:0;display:grid;place-items:center;color:#93c5fd;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}
+.loc-row small{display:block;color:#93c5fd;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin-bottom:2px}
+.loc-row a{color:#fff;text-decoration:none;font-weight:800;font-size:1.1rem;letter-spacing:.02em}
+.loc-row span{color:#e2e8f0}
+.loc-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:.4rem}
+.btn-sm{padding:11px 18px;font-size:.92rem;border-radius:12px}
+.btn-light{background:#fff;color:var(--primary-color);box-shadow:0 12px 26px -14px rgba(0,0,0,.6)}
+.btn-outline-light{color:#fff;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.06)}
+.btn-outline-light:hover{background:rgba(255,255,255,.14)}
+.loc-map{min-height:380px;background:#e2e8f0}
+.loc-map iframe{display:block;width:100%;height:100%;min-height:380px;border:0}
+.district-panel{margin-top:1.75rem;background:#fff;border:1px solid var(--line);border-radius:22px;padding:1.75rem;box-shadow:var(--shadow)}
+.dp-head{display:flex;justify-content:space-between;align-items:flex-end;gap:14px 24px;flex-wrap:wrap;margin-bottom:.5rem}
+.dp-head h3{color:var(--primary-color);font-size:1.25rem;margin-bottom:.2rem}
+.dp-head p{color:#64748b;font-size:.92rem}
+.dp-search{position:relative;flex:0 1 300px;width:100%}
+.dp-search i{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:#94a3b8;font-size:.9rem;pointer-events:none}
+.dp-search input{width:100%;padding:12px 14px 12px 42px;border-radius:12px;border:1px solid #dbe3ec;background:#f8fafc;font-size:.95rem;color:var(--text-dark);outline:none;transition:border-color .2s,box-shadow .2s,background .2s}
+.dp-search input:focus{border-color:var(--secondary-color);background:#fff;box-shadow:0 0 0 4px rgba(50,140,193,.12)}
+.dp-group{display:flex;align-items:center;gap:12px;margin:1.5rem 0 .85rem;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:#64748b;font-weight:700}
+.dp-group::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,#e2e8f0,transparent)}
+.district-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(205px,1fr));gap:10px}
+.district-card{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:14px;border:1px solid #e8eef5;background:#f8fafc;text-decoration:none;color:var(--text-dark);transition:background .3s,border-color .3s,box-shadow .4s var(--ease),transform .4s var(--ease)}
+.district-card:hover{background:#fff;border-color:rgba(50,140,193,.35);box-shadow:var(--shadow-lg);transform:translateY(-2px)}
+.dc-ic{width:38px;height:38px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;color:var(--secondary-color);background:linear-gradient(135deg,#eff6ff,#dbeafe);transition:background .3s,color .3s}
+.district-card:hover .dc-ic{background:linear-gradient(135deg,var(--primary-color),var(--secondary-color));color:#fff}
+.dc-tx{flex:1;min-width:0;line-height:1.25}
+.dc-tx strong{display:block;color:var(--primary-color);font-size:.98rem}
+.dc-tx small{color:#94a3b8;font-size:.76rem}
+.dc-arrow{color:#cbd5e1;font-size:.8rem;transition:transform .35s var(--ease),color .3s}
+.district-card:hover .dc-arrow{color:var(--secondary-color);transform:translateX(3px)}
+.district-card.home{grid-column:span 2;background:linear-gradient(135deg,#0b3c5d,#0d4468);border-color:transparent;box-shadow:0 14px 30px -18px rgba(11,60,93,.8)}
+.district-card.home strong{color:#fff}
+.district-card.home small{color:#93c5fd}
+.district-card.home .dc-ic{background:rgba(255,255,255,.12);color:#fff}
+.district-card.home .dc-arrow{color:#93c5fd}
+.district-card[hidden],.dp-group-wrap[hidden]{display:none}
+.dp-empty{text-align:center;color:#64748b;padding:1.5rem 0 .5rem}
+.dp-empty a{color:var(--secondary-color);font-weight:700;text-decoration:none}
+@media (max-width:900px){.loc-card{grid-template-columns:1fr}.loc-map,.loc-map iframe{min-height:300px}}
+@media (max-width:560px){
+.loc-info{padding:1.5rem 1.25rem}
+.loc-actions .btn{flex:1}
+.district-panel{padding:1.25rem 1rem}
+.dp-search{flex-basis:100%}
+.district-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.district-card{padding:10px;gap:9px}
+.dc-ic{width:32px;height:32px;border-radius:9px;font-size:.85rem}
+.dc-tx strong{font-size:.9rem}
+.dc-arrow{display:none}
+}
 @media (max-width:900px){.location-content-grid{grid-template-columns:1fr}}
 @media (max-width:768px){
 .top-bar{justify-content:center;text-align:center;font-size:.8rem;padding:.5rem 4%}
@@ -637,52 +694,171 @@ html{scroll-behavior:auto}
       <p>İzmir'in tüm ilçelerinden Karabağlar'daki yetkili merkezimize kolayca ulaşabilirsiniz.</p>
     </div>
 
-    <div class="location-section reveal">
-      <div class="location-header-bar">
-        <h3><i class="fa-solid fa-map-location-dot"></i> Burak Psikoteknik Değerlendirme Merkezi</h3>
+    <div class="loc-card reveal">
+      <div class="loc-info">
+        <h3>Burak Psikoteknik Değerlendirme Merkezi</h3>
+        <div class="loc-row">
+          <span class="ic"><i class="fa-solid fa-location-dot"></i></span>
+          <div><small>Adres</small><span>Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir</span></div>
+        </div>
+        <div class="loc-row">
+          <span class="ic"><i class="fa-solid fa-phone"></i></span>
+          <div><small>Randevu Hattı</small><a href="tel:05303100883">0530 310 08 83</a></div>
+        </div>
+        <div class="loc-row">
+          <span class="ic"><i class="fa-solid fa-clock"></i></span>
+          <div><small>Çalışma Saatleri</small><span>Pazartesi - Cumartesi: 09:00 - 19:00</span></div>
+        </div>
+        <div class="loc-actions">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=38.3767286,27.1342532" class="btn btn-sm btn-light" target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"></i> Yol Tarifi Al</a>
+          <a href="tel:05303100883" class="btn btn-sm btn-outline-light"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
+        </div>
+      </div>
+      <div class="loc-map">
+        <iframe src="https://maps.google.com/maps?q=%C4%B0zmir%20Karaba%C4%9Flar%20Burak%20Psikoteknik&amp;ll=38.3767286,27.1342532&amp;z=16&amp;output=embed" allowfullscreen="" loading="lazy" title="Burak Psikoteknik harita konumu"></iframe>
+      </div>
+    </div>
+
+    <div class="district-panel reveal">
+      <div class="dp-head">
         <div>
-          <a href="tel:05303100883"><i class="fa-solid fa-phone"></i> 0530 310 08 83</a>
+          <h3>Hizmet Verdiğimiz İlçeler</h3>
+          <p>İzmir'in 23 ilçesinden sürücülerimize Karabağlar'daki merkezimizde hizmet veriyoruz.</p>
+        </div>
+        <label class="dp-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="search" id="district-search" placeholder="İlçe Ara..." aria-label="İlçe ara" autocomplete="off">
+        </label>
+      </div>
+
+      <div class="dp-group-wrap">
+        <h4 class="dp-group">Merkez İlçeler</h4>
+        <div class="district-grid">
+          <a href="karabaglar-psikoteknik.html" class="district-card home" data-name="Karabağlar">
+            <span class="dc-ic"><i class="fa-solid fa-house-medical"></i></span>
+            <span class="dc-tx"><strong>Karabağlar</strong> <small>Psikoteknik · Merkezimiz Burada</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="konak-psikoteknik.html" class="district-card" data-name="Konak">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Konak</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="buca-psikoteknik.html" class="district-card" data-name="Buca">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Buca</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="gaziemir-psikoteknik.html" class="district-card" data-name="Gaziemir">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Gaziemir</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="balcova-psikoteknik.html" class="district-card" data-name="Balçova">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Balçova</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="narlidere-psikoteknik.html" class="district-card" data-name="Narlıdere">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Narlıdere</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="guzelbahce-psikoteknik.html" class="district-card" data-name="Güzelbahçe">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Güzelbahçe</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="bornova-psikoteknik.html" class="district-card" data-name="Bornova">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Bornova</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="bayrakli-psikoteknik.html" class="district-card" data-name="Bayraklı">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Bayraklı</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="karsiyaka-psikoteknik.html" class="district-card" data-name="Karşıyaka">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Karşıyaka</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="cigli-psikoteknik.html" class="district-card" data-name="Çiğli">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Çiğli</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
         </div>
       </div>
 
-      <div class="location-content-grid">
-        <div class="district-list-container">
-          <div class="address-box">
-            <p>📍 Yunus Emre Mah. Şht. Pilot Volkan Koçyiğit Blv. No:5 Kat:3 Daire:6 Karabağlar / İzmir</p>
-            <p>📞 <a href="tel:05303100883" style="color: inherit; text-decoration: none; font-weight: bold;">0530 310 08 83</a></p>
-          </div>
-
-          <div class="district-items">
-            <a href="karabaglar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karabağlar Psikoteknik</strong></span></div></a>
-            <a href="konak-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Konak Psikoteknik</strong></span></div></a>
-            <a href="buca-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Buca Psikoteknik</strong></span></div></a>
-            <a href="gaziemir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Gaziemir Psikoteknik</strong></span></div></a>
-            <a href="balcova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Balçova Psikoteknik</strong></span></div></a>
-            <a href="bornova-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bornova Psikoteknik</strong></span></div></a>
-            <a href="bayrakli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayraklı Psikoteknik</strong></span></div></a>
-            <a href="karsiyaka-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Karşıyaka Psikoteknik</strong></span></div></a>
-            <a href="cigli-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çiğli Psikoteknik</strong></span></div></a>
-            <a href="narlidere-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Narlıdere Psikoteknik</strong></span></div></a>
-            <a href="guzelbahce-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Güzelbahçe Psikoteknik</strong></span></div></a>
-            <a href="menderes-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Menderes Psikoteknik</strong></span></div></a>
-            <a href="torbali-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Torbalı Psikoteknik</strong></span></div></a>
-            <a href="kemalpasa-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kemalpaşa Psikoteknik</strong></span></div></a>
-            <a href="seferihisar-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Seferihisar Psikoteknik</strong></span></div></a>
-            <a href="urla-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Urla Psikoteknik</strong></span></div></a>
-            <a href="cesme-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Çeşme Psikoteknik</strong></span></div></a>
-            <a href="selcuk-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Selçuk Psikoteknik</strong></span></div></a>
-            <a href="tire-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Tire Psikoteknik</strong></span></div></a>
-            <a href="odemis-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Ödemiş Psikoteknik</strong></span></div></a>
-            <a href="kiraz-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Kiraz Psikoteknik</strong></span></div></a>
-            <a href="beydag-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Beydağ Psikoteknik</strong></span></div></a>
-            <a href="bayindir-psikoteknik.html" class="district-link"><div class="district-item"><i class="fa-solid fa-arrow-right"></i> <span><strong>Bayındır Psikoteknik</strong></span></div></a>
-          </div>
-        </div>
-
-        <div class="map-wrapper">
-          <iframe src="https://maps.google.com/maps?q=Yunus%20Emre%20Mah.%20%C5%9Eht.%20Pilot%20Volkan%20Ko%C3%A7yi%C4%9Fit%20Blv.%20No:5%20Karaba%C4%9Flar%20%2F%20%C4%B0zmir&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" allowfullscreen="" loading="lazy" title="Burak Psikoteknik harita konumu"></iframe>
+      <div class="dp-group-wrap">
+        <h4 class="dp-group">Çevre İlçeler</h4>
+        <div class="district-grid">
+          <a href="menderes-psikoteknik.html" class="district-card" data-name="Menderes">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Menderes</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="torbali-psikoteknik.html" class="district-card" data-name="Torbalı">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Torbalı</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="kemalpasa-psikoteknik.html" class="district-card" data-name="Kemalpaşa">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Kemalpaşa</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="seferihisar-psikoteknik.html" class="district-card" data-name="Seferihisar">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Seferihisar</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="urla-psikoteknik.html" class="district-card" data-name="Urla">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Urla</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="cesme-psikoteknik.html" class="district-card" data-name="Çeşme">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Çeşme</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="selcuk-psikoteknik.html" class="district-card" data-name="Selçuk">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Selçuk</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="tire-psikoteknik.html" class="district-card" data-name="Tire">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Tire</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="odemis-psikoteknik.html" class="district-card" data-name="Ödemiş">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Ödemiş</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="kiraz-psikoteknik.html" class="district-card" data-name="Kiraz">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Kiraz</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="beydag-psikoteknik.html" class="district-card" data-name="Beydağ">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Beydağ</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
+          <a href="bayindir-psikoteknik.html" class="district-card" data-name="Bayındır">
+            <span class="dc-ic"><i class="fa-solid fa-location-dot"></i></span>
+            <span class="dc-tx"><strong>Bayındır</strong> <small>Psikoteknik</small></span>
+            <i class="fa-solid fa-arrow-right dc-arrow"></i>
+          </a>
         </div>
       </div>
+
+      <p class="dp-empty" hidden>Aradığınız ilçe listede yok. Bilgi için <a href="tel:05303100883">0530 310 08 83</a> numaralı hattımızı arayabilirsiniz.</p>
     </div>
   </section>
 
@@ -758,6 +934,20 @@ html{scroll-behavior:auto}
     function upd(){ h.classList.toggle('scrolled', window.scrollY > 40); ticking = false; }
     window.addEventListener('scroll', function(){ if (!ticking) { requestAnimationFrame(upd); ticking = true; } }, {passive:true});
     upd();
+  })();
+
+  // İlçe arama
+  (function(){
+    var input = document.getElementById('district-search');
+    if (!input) return;
+    var cards = document.querySelectorAll('.district-card'), groups = document.querySelectorAll('.dp-group-wrap'), empty = document.querySelector('.dp-empty');
+    function norm(s){ return s.toLocaleLowerCase('tr').replace(/ı/g,'i').replace(/ğ/g,'g').replace(/ü/g,'u').replace(/ş/g,'s').replace(/ö/g,'o').replace(/ç/g,'c'); }
+    input.addEventListener('input', function(){
+      var q = norm(input.value.trim()), any = false;
+      cards.forEach(function(c){ var ok = !q || norm(c.dataset.name).indexOf(q) !== -1; c.hidden = !ok; if (ok) any = true; });
+      groups.forEach(function(g){ g.hidden = !g.querySelector('.district-card:not([hidden])'); });
+      empty.hidden = any;
+    });
   })();
 
   // SSS açılır-kapanır yapısı
