@@ -1,27 +1,4 @@
-// Giriş animasyonu
-  (function(){
-    var root = document.documentElement, intro = document.getElementById('intro');
-    if (!intro) return;
-    if (!root.classList.contains('show-intro')) { intro.remove(); return; }
-    var closed = false;
-    function close(){
-      if (closed) return; closed = true;
-      try { sessionStorage.setItem('bpIntro', '1'); } catch(e) {}
-      intro.classList.add('hide');
-      root.classList.remove('intro-lock');
-      setTimeout(function(){ intro.remove(); root.classList.remove('show-intro'); }, 850);
-    }
-    var timer = setTimeout(close, 4600);
-    intro.addEventListener('click', function(e){
-      if (e.target.closest('.intro-call')) { clearTimeout(timer); setTimeout(close, 300); return; }
-      close();
-    });
-    intro.addEventListener('wheel', close, {passive:true});
-    intro.addEventListener('touchmove', close, {passive:true});
-    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
-  })();
-
-  // Kaydırınca beliren öğeler
+// Kaydırınca beliren öğeler
   (function(){
     var els = document.querySelectorAll('.reveal');
     if (!('IntersectionObserver' in window)) { els.forEach(function(el){ el.classList.add('in'); }); return; }
