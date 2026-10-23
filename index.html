@@ -221,6 +221,14 @@
         "@type": "Answer",
         "text": "Evet. SRC belgenizin olup olmaması psikoteknik değerlendirme testine girmenize engel değildir."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Psikoteknik Belgemi Nereden Görebilirim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Psikoteknik raporunuzu, doktor onayının ardından e-Devlet Kapısı'ndaki E-İmzalı Psikoteknik Raporum (e-İmzalı Psikoteknik Değerlendirme Raporları Sorgulama) sayfasından görebilirsiniz."
+      }
     }
   ]
 }
@@ -560,6 +568,17 @@ footer{padding-bottom:calc(6.5rem + env(safe-area-inset-bottom))}
 *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 html{scroll-behavior:auto}
 }
+
+/* ---------- e-Devlet butonu ---------- */
+.edevlet-btn{display:inline-flex;align-items:center;gap:14px;margin-top:.9rem;padding:10px 18px 10px 10px;background:#fff;border:1px solid #e5e7eb;border-radius:14px;text-decoration:none;color:#1f2937;box-shadow:0 8px 22px -14px rgba(0,0,0,.35);transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s}
+.edevlet-btn:hover{transform:translateY(-2px);border-color:#c8102e;box-shadow:0 14px 28px -16px rgba(200,16,46,.55)}
+.ed-logo{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-width:92px;height:44px;padding:0 12px;border-radius:10px;background:#c8102e;color:#fff;font-weight:800;font-size:1.05rem;letter-spacing:.01em;font-family:Arial,Helvetica,sans-serif}
+.ed-logo b{font-style:italic;font-size:1.2rem;margin-right:1px}
+.ed-tx{display:flex;flex-direction:column;line-height:1.25}
+.ed-tx small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#6b7280;font-weight:700}
+.ed-tx strong{font-size:.98rem;color:#111827}
+.edevlet-btn > i{color:#c8102e;font-size:.85rem}
+@media (max-width:480px){.edevlet-btn{display:flex;width:100%}.ed-logo{min-width:80px}}
 </style>
 </head>
 <body>
@@ -851,12 +870,17 @@ html{scroll-behavior:auto}
 
       <div class="faq-item reveal" style="--d:.3s">
         <div class="faq-question">
-          <span><i class="fa-solid fa-magnifying-glass" style="color: var(--secondary-color); margin-right: 8px;" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="icons.svg?v=218e9dca#s-magnifying-glass"></use></svg></i> Psikoteknik Belgemi Nereden Sorgulayabilirim?</span>
+          <span><i class="fa-solid fa-magnifying-glass" style="color: var(--secondary-color); margin-right: 8px;" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="icons.svg?v=218e9dca#s-magnifying-glass"></use></svg></i> Psikoteknik Belgemi Nereden Görebilirim?</span>
           <i class="fa-solid fa-chevron-down" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="icons.svg?v=218e9dca#s-chevron-down"></use></svg></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            <p>Doktor onayının ardından e-Devlet'teki <a href="https://www.turkiye.gov.tr/saglik-e-imzali-psikoteknik-degerlendirme-raporlari-sorgulama" target="_blank" rel="noopener">“e-İmzalı Psikoteknik Değerlendirme Raporları Sorgulama”</a> hizmetine giriş yaparak raporunuzu görüntüleyebilirsiniz.</p>
+            <p>Psikoteknik raporunuzu, doktor onayının ardından <strong>e-Devlet</strong> üzerinden <strong>E-İmzalı Psikoteknik Raporum</strong> sayfasından görebilirsiniz. Raporunuzu görmek için aşağıdaki e-Devlet butonuna tıklayın:</p>
+            <a href="https://www.turkiye.gov.tr/saglik-e-imzali-psikoteknik-degerlendirme-raporlari-sorgulama" class="edevlet-btn" target="_blank" rel="noopener" aria-label="e-Devlet'te E-İmzalı Psikoteknik Raporum sayfasını aç">
+              <span class="ed-logo" aria-hidden="true"><b>e</b>-Devlet</span>
+              <span class="ed-tx"><small>Raporunuzu Görüntüleyin</small><strong>E-İmzalı Psikoteknik Raporum</strong></span>
+              <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="icons.svg?v=218e9dca#s-arrow-up-right-from-square"></use></svg></i>
+            </a>
           </div>
         </div>
       </div>
