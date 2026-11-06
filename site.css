@@ -333,4 +333,11 @@ header nav a[aria-current="page"]{color:var(--primary-color);box-shadow:inset 0 
 .video-card p,.prose .video-card p{color:#64748b;font-size:.9rem;line-height:1.6;margin:0}
 .prose .video-grid{margin:.4rem 0 1.2rem}
 .yt-link i{color:#f00;margin-right:4px}
+.reel-card{margin:0 auto 1.5rem;max-width:760px;display:flex;align-items:center;gap:1.75rem;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.reel-card video{display:block;width:270px;max-width:100%;height:auto;aspect-ratio:9/16;background:#0b3c5d;flex:none}
+.reel-card figcaption{padding:1.25rem 1.5rem 1.25rem 0}
+.reel-card h3{font-size:1.25rem;color:var(--primary-color);line-height:1.3;margin:0 0 .5rem}
+.reel-card p,.prose .reel-card p{color:#64748b;font-size:.95rem;line-height:1.6;margin:0}
+.reel-card .reel-cta,.prose .reel-card .reel-cta{margin-top:.9rem;font-weight:700}
+@media (max-width:640px){.reel-card{flex-direction:column;gap:0}.reel-card video{width:100%}.reel-card figcaption{padding:1rem 1.2rem 1.2rem}}
 /* ---------- /Videolar ---------- */

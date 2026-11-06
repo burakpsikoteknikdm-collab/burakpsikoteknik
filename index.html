@@ -472,6 +472,13 @@ header nav a[aria-current="page"]{color:var(--primary-color);box-shadow:inset 0 
 .video-card p,.prose .video-card p{color:#64748b;font-size:.9rem;line-height:1.6;margin:0}
 .prose .video-grid{margin:.4rem 0 1.2rem}
 .yt-link i{color:#f00;margin-right:4px}
+.reel-card{margin:0 auto 1.5rem;max-width:760px;display:flex;align-items:center;gap:1.75rem;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
+.reel-card video{display:block;width:270px;max-width:100%;height:auto;aspect-ratio:9/16;background:#0b3c5d;flex:none}
+.reel-card figcaption{padding:1.25rem 1.5rem 1.25rem 0}
+.reel-card h3{font-size:1.25rem;color:var(--primary-color);line-height:1.3;margin:0 0 .5rem}
+.reel-card p,.prose .reel-card p{color:#64748b;font-size:.95rem;line-height:1.6;margin:0}
+.reel-card .reel-cta,.prose .reel-card .reel-cta{margin-top:.9rem;font-weight:700}
+@media (max-width:640px){.reel-card{flex-direction:column;gap:0}.reel-card video{width:100%}.reel-card figcaption{padding:1rem 1.2rem 1.2rem}}
 /* ---------- /Videolar ---------- */
 
 /* ---------- Ulaşım & İlçeler ---------- */
@@ -597,6 +604,22 @@ html{scroll-behavior:auto}
 {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "VideoObject",
+      "name": "Psikoteknik Testinde Ne Oluyor?",
+      "description": "Binamızdan içeri girin, test odamızı görün: sürüş, tepki ve dikkat testlerinin nasıl uygulandığını 23 saniyede izleyin. Ezber yok, sınav yok.",
+      "thumbnailUrl": "https://burakpsikoteknik.com/psikoteknik-test-odasi.jpg",
+      "uploadDate": "2026-11-06",
+      "duration": "PT23S",
+      "contentUrl": "https://burakpsikoteknik.com/psikoteknik-test-odasi.mp4",
+      "inLanguage": "tr-TR",
+      "publisher": {
+        "@type": "MedicalBusiness",
+        "@id": "https://burakpsikoteknik.com/#organization",
+        "name": "Burak Psikoteknik Değerlendirme Merkezi",
+        "url": "https://burakpsikoteknik.com/"
+      }
+    },
     {
       "@type": "VideoObject",
       "name": "Psikoteknik Nedir? Psikoteknik Belgesi Nedir?",
@@ -809,6 +832,10 @@ html{scroll-behavior:auto}
       <h2>Videolarla Psikoteknik</h2>
       <p>Psikoteknik değerlendirme hakkında merak edilenleri kısa videolarla anlattık.</p>
     </div>
+      <figure class="reel-card reveal">
+        <video controls preload="none" playsinline width="720" height="1280" poster="psikoteknik-test-odasi.jpg" title="Psikoteknik Testinde Ne Oluyor?"><source src="psikoteknik-test-odasi.mp4" type="video/mp4"></video>
+        <figcaption><h3>Psikoteknik Testinde Ne Oluyor?</h3><p>Binamızdan içeri girin, test odamızı görün: sürüş, tepki ve dikkat testlerinin nasıl uygulandığını 23 saniyede izleyin. Ezber yok, sınav yok.</p><p class="reel-cta"><a href="tel:+905303100883">Randevu: 0530 310 08 83</a></p></figcaption>
+      </figure>
     <div class="video-grid">
       <figure class="video-card reveal" style="--d:0.00s">
         <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/dOjc_2qN-4Y" srcdoc="<style>*{margin:0;padding:0;overflow:hidden}html,body{height:100%;background:#0b3c5d}a{display:block;height:100%;position:relative}img{width:100%;height:100%;object-fit:cover}svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}a:hover svg path:first-child{fill:#c00}</style><a href='https://www.youtube-nocookie.com/embed/dOjc_2qN-4Y?autoplay=1' aria-label='Psikoteknik Nedir? Psikoteknik Belgesi Nedir? videosunu oynat'><img src='https://i.ytimg.com/vi/dOjc_2qN-4Y/hqdefault.jpg' alt='Psikoteknik Nedir? Psikoteknik Belgesi Nedir?'><svg viewBox='0 0 68 48' width='68' height='48'><path d='M66.5 7.7a8.5 8.5 0 0 0-6-6C55.3.3 34 .3 34 .3s-21.3 0-26.5 1.4a8.5 8.5 0 0 0-6 6C.1 13 .1 24 .1 24s0 11 1.4 16.3a8.5 8.5 0 0 0 6 6C12.7 47.7 34 47.7 34 47.7s21.3 0 26.5-1.4a8.5 8.5 0 0 0 6-6C67.9 35 67.9 24 67.9 24s0-11-1.4-16.3z' fill='#f00'/><path d='M45 24 27 14v20' fill='#fff'/></svg></a>" title="Psikoteknik Nedir? Psikoteknik Belgesi Nedir?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
