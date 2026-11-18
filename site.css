@@ -377,3 +377,11 @@ header nav a[aria-current="page"]{color:var(--primary-color);box-shadow:inset 0 
 .transit-note a{color:#1d6a9a;font-weight:600}
 @media (max-width:560px){.transit-section{margin-top:3.5rem}.transit-card{padding:1.1rem}}
 /* ---------- /Toplu taşıma ---------- */
+/* ---------- Kısa cevaplar ---------- */
+.qa-links{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:.7rem}
+.qa-links a{display:flex;gap:.6rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:.9rem 1.05rem;color:var(--primary-color);font-weight:600;text-decoration:none;line-height:1.45;transition:border-color .2s,box-shadow .2s}
+.qa-links a:hover{border-color:rgba(50,140,193,.4);box-shadow:var(--shadow)}
+.qa-links i{color:var(--secondary-color);margin-top:.2rem;flex-shrink:0}
+.short-answer{background:#f1f7fc;border:1px solid rgba(50,140,193,.2);border-radius:14px;padding:1rem 1.15rem}
+.short-answer p{margin:0;color:var(--text-dark)}
+/* ---------- /Kısa cevaplar ---------- */
