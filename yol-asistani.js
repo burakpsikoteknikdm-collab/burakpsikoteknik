@@ -100,6 +100,12 @@
         '<em>' + (karsi ? '' : '~' + a.m + ' m · ') + esc(ADRES) + ' (binada asansör var)</em></div></li>';
     }
     var ic = { otobus: '🚌', metro: '🚇', izban: '🚆', tramvay: '🚋' }[a.tip];
+    // Aynı duraktan aynı yere giden birden fazla otobüs hattı: hangisi önce gelirse
+    if (a.tip === 'otobus' && a.hatlar && a.hatlar.length > 1) {
+      var hl = a.hatlar.map(function (h) { return '<span class="ya-line">' + esc(h) + '</span>'; });
+      var liste = hl.slice(0, -1).join(', ') + ' veya ' + hl[hl.length - 1];
+      return '<li><span class="ya-si">' + ic + '</span><div><strong>' + esc(clean(a.binis)) + '</strong> durağından ' + liste + ' numaralı otobüslerden <strong>hangisi önce gelirse</strong> ona binin. <strong>' + esc(clean(a.inis)) + '</strong> durağında inin.<em>~' + a.dk + ' dk yolculuk · hatlar sık geçenden seyreğe sıralıdır</em></div></li>';
+    }
     var arac = a.tip === 'otobus' ? '<span class="ya-line">' + esc(a.hat) + '</span> numaralı otobüse'
       : a.tip === 'metro' ? '<span class="ya-line">' + esc(a.hat) + '</span> metrosuna'
       : a.tip === 'izban' ? '<span class="ya-line">İZBAN</span> trenine' : 'tramvaya (' + esc(a.ad) + ')';
@@ -108,7 +114,7 @@
       dur(a.durak) + ' <strong>' + esc(clean(a.inis)) + '</strong> ' + inIst(a.tip) + ' inin.<em>' + ek + '~' + a.dk + ' dk yolculuk</em></div></li>';
   }
   function summary(j) {
-    var lines = j.adimlar.filter(function (a) { return a.hat; }).map(function (a) { return a.tip === 'otobus' ? a.hat : a.tip === 'izban' ? 'İZBAN' : a.tip === 'tramvay' ? 'Tramvay' : a.hat; });
+    var lines = j.adimlar.filter(function (a) { return a.hat; }).map(function (a) { return a.tip === 'otobus' ? (a.hatlar && a.hatlar.length > 1 ? a.hatlar.slice(0, 3).join('/') + (a.hatlar.length > 3 ? '…' : '') : a.hat) : a.tip === 'izban' ? 'İZBAN' : a.tip === 'tramvay' ? 'Tramvay' : a.hat; });
     var akt = j.arac - 1;
     return lines.join(' → ') + ' · ~' + j.sure + ' dk' + (akt ? ' · ' + akt + ' aktarma' : ' · aktarmasız');
   }
