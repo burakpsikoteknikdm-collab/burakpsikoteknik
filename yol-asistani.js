@@ -175,4 +175,14 @@
   body.addEventListener('click', function (e) { if (e.target.closest('.ya-again')) start(); });
   // Sayfadaki herhangi bir öğeye data-yol-asistani eklenirse asistanı açar
   document.addEventListener('click', function (e) { var t = e.target.closest('[data-yol-asistani]'); if (t) { e.preventDefault(); open(); } });
+  // Sayfada görünür bir "Yol Tarifi Al" butonu varken köşedeki buton gizlenir; aşağı kaydırınca belirir
+  var inPage = document.querySelectorAll('[data-yol-asistani]');
+  if (inPage.length && 'IntersectionObserver' in window) {
+    var vis = new Set();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) vis.add(en.target); else vis.delete(en.target); });
+      fab.style.display = vis.size ? 'none' : '';
+    });
+    inPage.forEach(function (el) { io.observe(el); });
+  }
 })();

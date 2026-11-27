@@ -305,6 +305,7 @@ header nav a.nav-cta:hover{background:var(--secondary-color);color:#fff}
 .hero p{font-size:clamp(.98rem,3vw,1.12rem);max-width:680px;margin:0 auto 2.2rem;color:#dbe4ee}
 .hero-cta{display:flex;justify-content:center;align-items:stretch;gap:14px;flex-wrap:wrap}
 .btn{padding:14px 26px;border-radius:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),background-color .2s}
+.btn-yol{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35);font:inherit;font-weight:700;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}.btn-yol:hover{background:#fff;color:var(--primary-color);transform:translateY(-2px)}
 .btn:hover{transform:translateY(-3px)}
 .btn-primary{background-color:var(--accent-green);color:#fff;box-shadow:0 14px 30px -14px rgba(37,211,102,.9)}
 .btn-call{position:relative;background:#fff;color:var(--primary-color);padding:10px 26px 10px 10px;gap:14px;box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}
@@ -750,6 +751,9 @@ html{scroll-behavior:auto}
     <a href="https://wa.me/905303100883?text=Merhaba,%20psikoteknik%20hakk%C4%B1nda%20bilgi%20alabilir%20miyim%3F" class="btn btn-primary" target="_blank" rel="noopener">
       <i class="fa-brands fa-whatsapp" aria-hidden="true"><svg viewBox="0 0 448 512"><use href="icons.svg?v=1e04dfda#b-whatsapp"></use></svg></i> WhatsApp ile Bilgi Al
     </a>
+    <button type="button" class="btn btn-yol" data-yol-asistani>
+      <span aria-hidden="true">🧭</span> Yol Tarifi Al
+    </button>
   </div>
   <ul class="hero-trust hero-anim" style="--i:4">
     <li><i class="fa-solid fa-circle-check" aria-hidden="true"><svg viewBox="0 0 512 512"><use href="icons.svg?v=1e04dfda#s-circle-check"></use></svg></i> Sağlık Bakanlığı Onaylı Merkez</li>
@@ -1374,6 +1378,6 @@ html{scroll-behavior:auto}
   });
 </script>
 
-<script src="yol-asistani.js?v=38f63f16" defer></script>
+<script src="yol-asistani.js?v=c99477d3" defer></script>
 </body>
 </html>
