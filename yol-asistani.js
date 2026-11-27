@@ -45,7 +45,7 @@
   var st = document.createElement('style'); st.textContent = css; document.head.appendChild(st);
   var root = document.createElement('div'); root.className = 'ya-root';
   root.innerHTML =
-    '<button type="button" class="ya-fab" aria-haspopup="dialog"><span class="ya-fi" aria-hidden="true">🧭</span><span>Yol tarifi almak için tıklayın<small>İlçe ve semtinizi seçin</small></span></button>' +
+    '<button type="button" class="ya-fab" aria-haspopup="dialog"><span class="ya-fi" aria-hidden="true">🧭</span><span>Yol tarifi almak için tıklayın<small>Toplu taşıma veya araçla</small></span></button>' +
     '<div class="ya-panel" role="dialog" aria-label="Yol Tarifi Asistanı">' +
     '<div class="ya-head"><span class="ya-av" aria-hidden="true">🧭</span><div><b>Yol Tarifi Asistanı</b><span>Burak Psikoteknik · Karabağlar</span></div><button type="button" class="ya-x" aria-label="Kapat">✕</button></div>' +
     '<div class="ya-body" aria-live="polite"></div></div>';
@@ -68,8 +68,8 @@
   }
 
   // Seçim kutusu: arama + düğmeler
-  function picker(placeholder, items, onPick) {
-    var d = msg('<input class="ya-search" type="search" autocomplete="off" placeholder="' + esc(placeholder) + '"><div class="ya-chips"></div>');
+  function picker(placeholder, items, onPick, noSearch) {
+    var d = msg((noSearch ? '<input type="hidden">' : '<input class="ya-search" type="search" autocomplete="off" placeholder="' + esc(placeholder) + '">') + '<div class="ya-chips"></div>');
     var inp = d.querySelector('input'), box = d.querySelector('.ya-chips');
     function draw(q) {
       var nq = norm(q || ''), html = '', n = 0;
@@ -83,7 +83,7 @@
       var b = e.target.closest('.ya-chip'); if (!b) return;
       d.remove(); onPick(items[+b.dataset.i]);
     });
-    setTimeout(function () { if (window.matchMedia('(min-width:769px)').matches) inp.focus(); }, 50);
+    setTimeout(function () { if (!noSearch && window.matchMedia('(min-width:769px)').matches) inp.focus(); }, 50);
   }
 
   function stepHTML(a) {
@@ -146,11 +146,49 @@
     });
   }
 
+  function answerCar(ilce, yer) {
+    var ad = yer.ad.replace(/ \((Metro|İZBAN|Tramvay) İstasyonu\)$/, '');
+    var gm = 'https://www.google.com/maps/dir/?api=1&origin=' + yer.lat + ',' + yer.lon + '&destination=' + DEST + '&travelmode=driving';
+    return typing(700).then(function () { return getJSON('arac/' + ilce.slug + '.json'); }).then(function (all) {
+      var r = all[yer.ad];
+      if (r) {
+        msg('<b>' + esc(ad) + '</b> (' + esc(ilce.ad) + ') bölgesinden merkezimize araçla yaklaşık <b>' + String(r.km).replace('.', ',') + ' km</b>, trafik yokken <b>~' + r.dk + ' dakika</b>. Güzergahı özetliyorum:');
+        return typing(600).then(function () {
+          msg('<ol class="ya-steps">' + r.adimlar.map(function (a) {
+            var m = a.m >= 1000 ? String((a.m / 1000).toFixed(1)).replace('.', ',') + ' km' : a.m + ' m';
+            return '<li><span class="ya-si">🚗</span><div>' + a.t + (a.m >= 50 ? '<em>~' + m + '</em>' : '') + '</div></li>';
+          }).join('') +
+            '<li><span class="ya-si">📍</span><div>Merkezimiz <b>Şht. Pilot Volkan Koçyiğit Bulvarı</b> üzerinde, <b>Mobilyacılar Sitesi ve Karabağlar Sanayi Sitesi\'nin karşısındadır</b>; Kaymakkuyu 2 otobüs durağının tam karşısı.<em>' + esc(ADRES) + ' (binada asansör var)</em></div></li></ol>');
+        });
+      }
+      msg('<b>' + esc(ad) + '</b> bölgesinden araç güzergahını Google Haritalar\'da anlık trafikle birlikte görebilirsiniz.');
+    }).catch(function () {
+      msg('<b>' + esc(ad) + '</b> bölgesinden araç güzergahını Google Haritalar\'da anlık trafikle birlikte görebilirsiniz.');
+    }).then(function () {
+      msg('💡 Çevre yolunu kullanıyorsanız Karabağlar\'da <b>4012. Sokak</b>\'a inen çıkışı kullanın; çıkıştan merkezimize ~450 m kalır.');
+      return typing(400);
+    }).then(function () {
+      msg('<div class="ya-acts">' +
+        '<a class="ya-btn pri" target="_blank" rel="noopener" href="' + gm + '">🧭 Google Haritalar\'da navigasyonu başlat</a>' +
+        '<a class="ya-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=' + DEST + '&travelmode=driving">📍 Bulunduğum konumdan tarif al</a>' +
+        '<a class="ya-btn grn" href="tel:' + TEL + '">📞 Bizi arayın: ' + TEL_TXT + '</a>' +
+        '<button type="button" class="ya-btn ya-again">↺ Başka bir yerden tarif al</button></div>' +
+        '<p class="ya-note" style="margin-top:8px">Güzergah OpenStreetMap yol verisiyle hesaplanmıştır; süre trafiksiz tahmindir. Anlık trafik için navigasyonu başlatın.</p>');
+    });
+  }
+
   function start() {
     body.innerHTML = '';
-    msg('Merhaba! 👋 Ben Burak Psikoteknik\'in yol tarifi asistanıyım. Merkezimize <b>nereden</b> geleceğinizi söyleyin, size hangi otobüs, metro veya İZBAN\'a binip nerede ineceğinizi adım adım anlatayım.');
+    msg('Merhaba! 👋 Ben Burak Psikoteknik\'in yol tarifi asistanıyım. Merkezimize nasıl geleceğinizi ve nereden yola çıkacağınızı söyleyin, size adım adım yol tarifi vereyim.');
+    msg('Merkezimize <b>nasıl</b> geleceksiniz?');
+    picker('', [{ label: '🚌 Toplu taşımayla', data: 'toplu' }, { label: '🚗 Kendi aracımla', data: 'arac' }], function (m) {
+      msg(esc(m.label), true);
+      typing(400).then(function () { pickPlace(m.data); });
+    }, true);
+  }
+  function pickPlace(mode) {
     getJSON('index.json').then(function (ix) {
-      msg('Önce <b>ilçenizi</b> seçin:');
+      msg('Nereden yola çıkacaksınız? Önce <b>ilçenizi</b> seçin:');
       picker('İlçe ara… (ör. Balçova)', ix.ilceler.map(function (i) { return { label: i.ad, data: i }; }), function (it) {
         var ilce = it.data;
         msg(esc(ilce.ad), true);
@@ -158,7 +196,7 @@
           msg('<b>' + esc(ilce.ad) + '</b> içinde hangi <b>mahalle veya semttesiniz</b>? Metro, İZBAN ve tramvay istasyonlarını da seçebilirsiniz.');
           picker('Mahalle / semt ara… (ör. Fahrettin Altay)', d.yerler.map(function (y) { return { label: y.ad.replace(/ \((Metro|İZBAN|Tramvay) İstasyonu\)$/, ''), sub: y.tur === 'istasyon' ? (y.ad.match(/\((\S+) İstasyonu\)$/) || [])[1] + ' istasyonu' : '', data: y }; }), function (p) {
             msg(esc(p.label) + (p.sub ? ' (' + esc(p.sub) + ')' : ''), true);
-            answer(ilce, p.data);
+            (mode === 'arac' ? answerCar : answer)(ilce, p.data);
           });
         }).catch(fail);
       });
